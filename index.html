@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<!-- MARGOSCHIS NAGAR (மர்காஷியஸ் நகர்) PLOT MAP | Model: SANKAR'S JINGIL BELLS | Created: 2026-11-20 -->
+<!-- நாசரேத் கிராமம், நாசரேத் SRO, தூத்துக்குடி மாவட்டம் | DTCP Layout No. 193/2026 | விற்பனை விபரங்கள்: 13 Merged Preview ஆவணங்கள் – 16 பிளாட்டுகள் (பதிவு நிலுவையில்) | Updated: 2026-11-22 -->
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Margoschis Nagar — Plot Map</title>
+<style>
+/* ===== THEME : Dark Steel Blue / Slate — medium darkness, amber accents ===== */
+:root {
+  color-scheme: dark;
+  --bg:       #1f2b3e;   /* page background  */
+  --bg2:      #263347;   /* header / panels  */
+  --bg3:      #2d3d57;   /* hover / elevated */
+  --bg4:      #223042;   /* results panel    */
+  --border:   #3d5478;   /* subtle dividers  */
+  --accent:   #e8a020;   /* amber gold       */
+  --accent2:  #f0c050;   /* lighter amber    */
+  --blue:     #3b82f6;   /* buttons          */
+  --blue2:    #60a5fa;   /* links            */
+  --txt:      #dce8f8;   /* primary text     */
+  --txt2:     #8faabf;   /* secondary text   */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', 'Nirmala UI', 'Noto Sans Tamil', Latha, Arial, sans-serif; background: var(--bg); color: var(--txt); min-height: 100vh; }
+
+/* ── HEADER ── */
+.header {
+  background: linear-gradient(135deg, #2a3f60 0%, #1f2b3e 100%);
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 2px 12px rgba(232,160,32,0.18);
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  flex-wrap: nowrap;
+}
+.header-left { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.header-title  { font-size: 0.95rem; font-weight: 700; color: var(--accent2); letter-spacing: 0.02em; }
+.header-garden { font-size: 0.72rem; font-weight: 600; color: var(--accent); margin-top: 1px; }
+.header-sub    { font-size: 0.66rem; color: var(--txt2); margin-top: 1px; }
+@media (max-width: 600px) {
+  .header { padding: 8px 10px; gap: 6px; }
+  .header-title  { font-size: 0.74rem; letter-spacing: 0; line-height: 1.25; }
+  .header-garden { font-size: 0.62rem; }
+  .header-sub    { font-size: 0.58rem; }
+  .docs-dropdown-btn { padding: 5px 8px; font-size: 0.66rem; }
+}
+
+/* ── PR DOCS DROPDOWN ── */
+.docs-dropdown-wrap { position: relative; display: flex; align-items: center; flex-shrink: 0; }
+.docs-dropdown-btn {
+  padding: 6px 11px; border-radius: 7px;
+  border: 1.5px solid var(--accent);
+  background: rgba(232,160,32,0.14); color: var(--accent2);
+  font-size: 0.74rem; font-weight: 700; cursor: pointer;
+  transition: all 0.18s; white-space: nowrap; line-height: 1.3;
+  display: flex; align-items: center; gap: 5px;
+}
+.docs-dropdown-btn:hover, .docs-dropdown-btn:active { background: rgba(232,160,32,0.28); }
+.docs-arrow { font-size: 0.65rem; transition: transform 0.2s; }
+.docs-dropdown-wrap.open .docs-arrow { transform: rotate(180deg); }
+.docs-dropdown-menu {
+  display: none; position: absolute; right: 0; top: calc(100% + 6px);
+  background: var(--bg2); border: 1.5px solid var(--accent); border-radius: 10px;
+  min-width: 340px; max-width: 420px; z-index: 9000; box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+  max-height: 70vh; overflow-y: auto;
+}
+.docs-dropdown-menu.open { display: block; }
+.docs-menu-title {
+  padding: 8px 14px; font-size: 0.7rem; font-weight: 700;
+  color: var(--accent2); background: #2f3d4f;
+  border-bottom: 1px solid var(--border); border-top: 1px solid var(--border); letter-spacing: 0.03em;
+  position: sticky; top: 0; z-index: 1;
+}
+.docs-menu-item {
+  display: flex; align-items: center; gap: 9px;
+  padding: 9px 14px; border-bottom: 1px solid var(--border);
+  text-decoration: none; color: var(--txt);
+  font-size: 0.79rem; transition: background 0.12s; cursor: pointer;
+}
+.docs-menu-item:hover, .docs-menu-item:active { background: var(--bg3); color: var(--blue2); }
+.docs-menu-item:last-child { border-bottom: none; }
+.docs-menu-icon { font-size: 0.95rem; flex-shrink: 0; }
+.docs-menu-label { flex: 1; font-weight: 600; line-height: 1.35; min-width: 0; }
+.docs-menu-date { font-weight: 400; color: var(--txt2); font-size: 0.7rem; }
+.docs-menu-sub { font-size: 0.67rem; color: var(--txt2); font-weight: 400; display: block; }
+.docs-link-arr { font-size: 0.7rem; color: var(--blue2); flex-shrink: 0; }
+.docs-menu-empty { padding: 14px; font-size: 0.78rem; color: var(--txt2); text-align: center; }
+@media (max-width: 600px) {
+  .docs-dropdown-menu {
+    position: fixed; right: 8px; left: auto; top: 54px;
+    min-width: min(340px, calc(100vw - 16px));
+    max-width: calc(100vw - 16px);
+    max-height: 66vh;
+  }
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 5px 10px; background: var(--bg4);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.72rem; flex-wrap: wrap;
+}
+.stat-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px; border-radius: 20px;
+  border: 1px solid var(--border); background: rgba(31,43,62,0.7);
+  color: var(--txt2); font-weight: 700; white-space: nowrap; font-size: inherit;
+}
+.stat-chip b { font-size: 0.8rem; }
+.lbl-short { display: none; }
+.stat-total b { color: var(--accent2); }
+.stat-sold  { border-color: rgba(239,68,68,0.5); }
+.stat-sold b { color: #f87171; }
+.stat-resale { border-color: rgba(96,165,250,0.5); }
+.stat-resale b { color: #60a5fa; }
+.stat-double { border-color: rgba(244,114,182,0.6); cursor: pointer; font-family: inherit; }
+.stat-double b { color: #f472b6; }
+.stat-double:hover { background: rgba(244,114,182,0.16); }
+.stat-avail { border-color: rgba(34,197,94,0.5); }
+.stat-avail b { color: #4ade80; }
+@media (max-width: 600px) {
+  .stats-bar { gap: 4px; padding: 4px 4px; flex-wrap: wrap; }
+  .stat-chip { padding: 2px 7px; font-size: 0.62rem; gap: 3px; flex-shrink: 1; min-width: 0; }
+  .stat-chip b { font-size: 0.7rem; }
+  .lbl-full { display: none; }
+  .lbl-short { display: inline; }
+}
+
+/* ── SEARCH SECTION ── */
+.search-section {
+  background: linear-gradient(135deg, #263347 0%, #2a3a52 100%);
+  padding: 8px 12px 8px;
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 2px 10px rgba(232,160,32,0.15);
+  position: sticky; top: 0; z-index: 500;
+}
+.search-type-row { display: flex; gap: 5px; margin-bottom: 7px; align-items: center; flex-wrap: wrap; }
+.search-type-label { font-size: 0.78rem; font-weight: 700; color: var(--accent2); margin-right: 3px; }
+.stab {
+  display: flex; align-items: center; gap: 4px;
+  padding: 5px 10px; border-radius: 7px; border: 1.5px solid var(--border);
+  background: rgba(31,43,62,0.7); color: var(--txt2);
+  font-size: 0.72rem; font-weight: 700; cursor: pointer;
+  transition: all 0.18s; white-space: nowrap; line-height: 1.3;
+}
+.stab.active { background: var(--blue); border-color: var(--blue2); color: #fff; box-shadow: 0 0 8px rgba(59,130,246,0.4); }
+.stab:hover:not(.active) { background: var(--bg3); color: var(--blue2); border-color: var(--blue2); }
+@media (max-width: 600px) {
+  .search-type-row { flex-wrap: nowrap; gap: 4px; }
+  .search-type-label { margin-right: 0; font-size: 0.8rem; }
+  .stab { padding: 5px 4px; font-size: 0.62rem; gap: 2px; flex: 1 1 0; justify-content: center; min-width: 0; }
+}
+.search-input-row { display: flex; gap: 6px; align-items: center; }
+.search-input {
+  flex: 1; padding: 8px 12px; border-radius: 8px;
+  border: 1.5px solid var(--border); background: var(--bg);
+  color: var(--txt); font-size: 0.88rem; outline: none;
+  transition: border-color 0.18s;
+}
+.search-input:focus { border-color: var(--accent); box-shadow: 0 0 6px rgba(232,160,32,0.3); }
+.search-input::placeholder { color: var(--txt2); opacity: 0.75; }
+.clear-btn {
+  display: none; padding: 8px 12px; border-radius: 8px; border: 1.5px solid var(--border);
+  background: var(--bg3); color: var(--txt2); font-size: 0.8rem; font-weight: 700; cursor: pointer;
+  transition: all 0.15s;
+}
+.clear-btn.show { display: block; }
+.clear-btn:hover { background: #b91c1c; border-color: #ef4444; color: #fff; }
+
+/* ── RESULTS PANEL ── */
+.results-panel { display: none; background: var(--bg4); border-bottom: 2px solid var(--border); max-height: 46vh; overflow-y: auto; }
+.results-panel.open { display: block; }
+.results-count { padding: 7px 14px; font-size: 0.72rem; font-weight: 700; color: var(--accent2); background: rgba(232,160,32,0.08); border-bottom: 1px solid var(--border); }
+.no-results { padding: 16px 14px; font-size: 0.84rem; color: var(--txt2); text-align: center; }
+.result-item {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+  cursor: pointer; transition: background 0.12s;
+}
+.result-item:hover { background: var(--bg3); }
+.result-item.selected-result { background: rgba(59,130,246,0.22); border-left: 4px solid var(--accent); }
+.result-badge {
+  padding: 4px 9px; border-radius: 6px; background: var(--blue);
+  color: #fff; font-size: 0.72rem; font-weight: 700; white-space: nowrap; flex-shrink: 0;
+}
+.result-badge.other { background: #64748b; }
+.result-badge.none  { background: #475569; }
+.result-info { flex: 1; min-width: 140px; }
+.result-name { font-size: 0.84rem; font-weight: 700; color: var(--txt); }
+.result-doc { font-size: 0.72rem; color: var(--txt2); margin-top: 1px; }
+.result-flag { font-size: 0.68rem; font-weight: 700; margin-left: 6px; }
+.result-flag.warn { color: #fbbf24; } .result-flag.bad { color: #f87171; }
+.result-dls { display: flex; gap: 6px; flex-wrap: wrap; }
+.result-dl {
+  padding: 4px 8px; border-radius: 6px; border: 1px solid var(--accent);
+  background: rgba(232,160,32,0.12); color: var(--accent2);
+  font-size: 0.68rem; font-weight: 700; text-decoration: none; white-space: nowrap;
+  transition: all 0.15s;
+}
+.result-dl:hover { background: var(--accent); color: #1f2b3e; }
+
+/* ── MAP AREA ── */
+.map-outer { padding: 8px; }
+.map-wrapper {
+  position: relative; width: 100%; height: 74vh;
+  overflow: auto; border: 2px solid var(--border); border-radius: 10px;
+  background: #17202e;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;            /* ஒரு விரல் = நகர்த்த ; இரு விரல் pinch = கீழே உள்ள JS மூலம் பெரிய அளவில் zoom */
+  scrollbar-width: thin; scrollbar-color: #3d5478 #17202e;
+  cursor: grab;
+}
+.map-wrapper.dragging { cursor: grabbing; }
+.map-wrapper.zoomed { overscroll-behavior: none; }   /* zoom செய்த நிலையில் ஓரத்தில் வரும் overscroll glow / பக்கம் நகர்வதைத் தடு */
+.map-wrapper::-webkit-scrollbar { width: 8px; height: 8px; background: #17202e; }
+.map-wrapper::-webkit-scrollbar-thumb { background: #3d5478; border-radius: 4px; }
+.map-wrapper::-webkit-scrollbar-corner { background: #17202e; }
+/* Mobile / touch: scrollbar, border, வளைந்த மூலை எதுவும் இல்லை — வரைபடத்திற்கு கீழே எந்தக் கோடும் வராது */
+@media (max-width: 900px), (pointer: coarse) {
+  .map-outer { padding: 6px 0 0; }
+  .map-wrapper { scrollbar-width: none; border: 0; border-radius: 0; background: transparent; }
+  .map-wrapper::-webkit-scrollbar { display: none; width: 0; height: 0; }
+}
+.map-inner { position: relative; display: block; width: max-content; min-width: 100%; font-size: 0; line-height: 0; }
+#plotImg { display: block; vertical-align: top; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; outline: none; border: 0; -webkit-tap-highlight-color: transparent; }
+.map-error { display: none; padding: 28px 18px; color: var(--txt); font-size: 0.86rem; line-height: 1.6; text-align: center; }
+.map-error.show { display: block; }
+.map-error b { color: var(--accent2); }
+/* ── HIGHLIGHT: Photoshop Multiply mode (no blink) ── */
+#svgOverlay {
+  display: none;                       /* highlight இருக்கும் போது மட்டும் காட்டப்படும் */
+  position: absolute; left: 0; top: 0; pointer-events: none;
+  z-index: 500; overflow: hidden; mix-blend-mode: multiply;
+}
+#plotHighlight, #svgOverlay polygon.extra {
+  fill: #FFA200; fill-opacity: 0.75;
+  stroke: #000000; stroke-width: 0;
+  stroke-linejoin: round; vector-effect: non-scaling-stroke;
+  display: none;
+}
+area { cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; }
+
+/* ── TOOLTIP ── */
+.tip-box {
+  display: none; position: fixed; z-index: 9500;
+  width: max-content;
+  max-width: min(620px, calc(100vw - 20px));
+  background: #263347; border: 2px solid var(--accent); border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6); overflow: hidden;
+  font-size: 0.86rem; line-height: 1.55;
+}
+.tip-box.open { display: block; }
+.tip-box.sheet { border-radius: 12px 12px 0 0; border-left: 0; border-right: 0; border-bottom: 0; }
+.tip-title {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 8px 12px; background: linear-gradient(135deg, #2a3f60, #1f2b3e);
+  border-bottom: 1.5px solid var(--accent);
+  color: var(--accent2); font-weight: 700; font-size: 0.82rem;
+}
+.tip-close {
+  border: 1px solid var(--border); background: var(--bg3); color: var(--txt);
+  border-radius: 6px; padding: 2px 9px; font-size: 0.8rem; font-weight: 700;
+  cursor: pointer; line-height: 1.4; flex-shrink: 0;
+}
+.tip-close:hover { background: #b91c1c; border-color: #ef4444; color: #fff; }
+.tip-body { padding: 10px 13px 12px; color: var(--txt); max-height: 60vh; overflow-y: auto; }
+.tip-body b { color: #fff; }
+.tip-body u { text-decoration-color: var(--accent); }
+.tip-body hr { border: none; border-top: 2px solid #6699cc; margin: 7px 0; }
+.tip-owner { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.45); border-radius: 7px; padding: 5px 9px; margin-bottom: 7px; }
+.tip-owner b { color: #4ade80; }
+.tip-owner.bad { background: rgba(239,68,68,0.12); border-color: rgba(239,68,68,0.5); }
+.tip-owner.bad b { color: #fca5a5; }
+.tip-tx { padding: 4px 0 2px; }
+.tip-tx-head { color: var(--accent2); font-weight: 700; }
+.tip-tx-nature { font-size: 0.74rem; color: var(--txt2); font-weight: 400; }
+.tip-bnd { font-size: 0.78rem; color: #c5d6ea; }
+.tip-flag { display: inline-block; margin-top: 4px; padding: 1px 8px; border-radius: 5px; font-size: 0.72rem; font-weight: 700; }
+.tip-flag.ok   { background: rgba(34,197,94,0.14); color: #86efac; border: 1px solid rgba(34,197,94,0.4); }
+.tip-flag.warn { background: rgba(251,191,36,0.14); color: #fcd34d; border: 1px solid rgba(251,191,36,0.45); }
+.tip-flag.bad  { background: rgba(239,68,68,0.16); color: #fca5a5; border: 1px solid rgba(239,68,68,0.5); }
+.tip-more { margin-top: 4px; font-size: 0.76rem; color: #c5d6ea; }
+.tip-more summary { cursor: pointer; color: var(--blue2); font-weight: 700; }
+.tip-more ul { margin: 4px 0 4px 18px; }
+.tip-more p { margin: 4px 0; }
+.tip-note { font-size: 0.76rem; color: #fbbf24; margin-top: 6px; border-left: 3px solid #fbbf24; padding-left: 8px; }
+.tip-note.bad { color: #fca5a5; border-left-color: #ef4444; }
+/* ── புதிய tooltip வடிவம்: Doc.No / எழுதிக் கொடுப்பவர் / எழுதி வாங்குபவர் / சொத்து விபரக்குறிப்பு ── */
+.tip-docline { font-size: 0.92rem; margin: 2px 0 4px; }
+.doc-blank { display: inline-block; width: 4.2em; border-bottom: 2px dashed var(--accent2); margin: 0 2px; vertical-align: baseline; }
+.tip-sec { margin: 9px 0 4px; padding: 3px 9px; border-left: 4px solid var(--accent); background: rgba(232,160,32,0.12); color: var(--accent2); font-weight: 700; font-size: 0.84rem; border-radius: 0 5px 5px 0; }
+.tip-people { margin: 2px 0 2px 22px; }
+.tip-people li { margin: 1px 0; }
+.tip-people b { color: #fff; }
+.tip-place { font-size: 0.76rem; color: var(--txt2); }
+.tip-cell { font-size: 0.82rem; color: var(--txt); }
+.tip-sketch { display: block; width: 100%; max-width: 330px; height: auto; margin: 6px auto 4px; background: #1b2738; border: 1px solid var(--border); border-radius: 8px; }
+.tip-sketch polygon { fill: rgba(232,160,32,0.22); stroke: #f0c050; stroke-width: 2; stroke-linejoin: round; }
+.tip-sketch text { fill: #dce8f8; font-size: 12.5px; font-family: inherit; }
+.tip-sketch text.dim { fill: #fff; font-weight: 700; }
+.tip-sketch text.pno { fill: #f0c050; font-weight: 700; font-size: 15px; }
+.tip-sketch text.dir { fill: #8faabf; font-size: 10.5px; }
+.tip-bnd-tbl { width: 100%; border-collapse: collapse; margin: 4px 0 6px; font-size: 0.8rem; }
+.tip-bnd-tbl td { border: 1px solid var(--border); padding: 3px 7px; vertical-align: top; }
+.tip-bnd-tbl td:first-child { white-space: nowrap; color: var(--accent2); font-weight: 700; width: 1%; }
+.tip-bnd-tbl td:nth-child(2) { white-space: nowrap; text-align: right; color: #fff; font-weight: 700; width: 1%; }
+.tip-kv { font-size: 0.82rem; line-height: 1.7; }
+.tip-prop { margin-top: 9px; }
+.tip-prop summary { cursor: pointer; padding: 5px 9px; border-left: 4px solid var(--accent); background: rgba(232,160,32,0.12); color: var(--accent2); font-weight: 700; font-size: 0.84rem; border-radius: 0 5px 5px 0; }
+.tip-prop summary:hover { background: rgba(232,160,32,0.22); }
+.tip-prop[open] summary { margin-bottom: 4px; }
+.tipdl {
+  display: inline-block; margin: 4px 0 2px;
+  padding: 4px 10px; border-radius: 6px; border: 1px solid var(--accent);
+  background: rgba(232,160,32,0.14); color: var(--accent2);
+  font-size: 0.76rem; font-weight: 700; text-decoration: none;
+  transition: all 0.15s;
+}
+.tipdl:hover { background: var(--accent); color: #1f2b3e; }
+@media (max-width: 600px) {
+  .tip-body { max-height: 44vh; }
+}
+
+/* ── FOOTER ── */
+.footer { padding: 10px 14px 16px; text-align: center; font-size: 0.68rem; color: var(--txt2); line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<div class="header">
+  <div class="header-left">
+    <div class="header-title">மர்காஷியஸ் நகர்</div>
+    <div class="header-garden">Last Update : 22-11-2026</div>
+  </div>
+  <div class="docs-dropdown-wrap" id="docsDropdownWrap">
+    <button class="docs-dropdown-btn" onClick="toggleDocsMenu(event)">📂 PR Documents <span class="docs-arrow">▼</span></button>
+    <div class="docs-dropdown-menu" id="docsDropdownMenu">
+      <div class="docs-menu-title">PR Documents — மூல ஆவணங்கள்</div>
+      <a class="docs-menu-item" href="https://drive.google.com/file/d/1tBanUKWDFxOiGU3Pb-pVkcuPKg5ES8pi/view" data-doc="485/2022" target="_blank">
+        <span class="docs-menu-icon">📄</span><span class="docs-menu-label">485/2022 <span class="docs-menu-date">(31-Mar-2022)</span><span class="docs-menu-sub">கிரையம் — → விக்டர்ராஜ் டேனியல் முதலிய ஐவர்</span></span><span class="docs-link-arr">↗</span></a>
+      <a class="docs-menu-item" href="https://drive.google.com/file/d/1KyCos-81d1LDWZ0UuKGE8kWIkoUvUkb7/view" data-doc="595/2022" target="_blank">
+        <span class="docs-menu-icon">📄</span><span class="docs-menu-label">595/2022 <span class="docs-menu-date">(22-Apr-2022)</span><span class="docs-menu-sub">கிரையம் — → விக்டர்ராஜ் டேனியல் முதலிய ஐவர்</span></span><span class="docs-link-arr">↗</span></a>
+      <a class="docs-menu-item" href="https://drive.google.com/file/d/1phl_DRCbQjRcqE-ynP35PkFTdVs5UYQb/view" data-doc="799/2022" target="_blank">
+        <span class="docs-menu-icon">📄</span><span class="docs-menu-label">799/2022 <span class="docs-menu-date">(20-May-2022)</span><span class="docs-menu-sub">கிரையம் — → விக்டர்ராஜ் டேனியல் முதலிய ஐவர்</span></span><span class="docs-link-arr">↗</span></a>
+      <a class="docs-menu-item" href="https://drive.google.com/file/d/1tPpJGYamzfp4epyN8h_1wAmqFac7b4TK/view" data-doc="1072/2022" target="_blank">
+        <span class="docs-menu-icon">📄</span><span class="docs-menu-label">1072/2022 <span class="docs-menu-date">(04-Jul-2022)</span><span class="docs-menu-sub">பாகப்பிரிவினை — விக்டர்ராஜ் டேனியல் முதலிய ஐவர்</span></span><span class="docs-link-arr">↗</span></a>
+      <div class="docs-menu-title">மனை எண் இல்லாத பதிவுகள்</div>
+      <a class="docs-menu-item" href="https://drive.google.com/file/d/1by62KgTPyg4azE3pn3CTCvV6LuT3sXZd/view" data-doc="1382/2026" target="_blank">
+        <span class="docs-menu-icon">📑</span><span class="docs-menu-label">1382/2026 <span class="docs-menu-date">(24-Aug-2026)</span><span class="docs-menu-sub">தான ஆவணம் — சாலைகள் & PP-1 → நாசரேத் பேரூராட்சி</span></span><span class="docs-link-arr">↗</span></a>
+      <a class="docs-menu-item" href="https://drive.google.com/file/d/1LsoGWUh7WUVucIEUlPZdXELQwaz09xuj/view" data-doc="1383/2026" target="_blank">
+        <span class="docs-menu-icon">📑</span><span class="docs-menu-label">1383/2026<span class="docs-menu-sub">மின்வாரிய (EB) ஒதுக்கீடு பகுதி (PP-2) ஆவணம்</span></span><span class="docs-link-arr">↗</span></a>
+      <!-- மேலும் ஒரு மூல ஆவணம் சேர்க்க: கீழே உள்ள மாதிரி வரியை copy செய்து நிரப்பவும்.
+           href-ல் PDF link (Google Drive) கொடுத்தால் ↗ ஆகி PDF திறக்கும்; href="" எனில் ⏳ காட்டும் (OTHERS-ல் அதே Doc.No இருந்தால் தொட்டால் விவரம் வரும்).
+      <a class="docs-menu-item" href="" data-doc="123/2020" target="_blank">
+        <span class="docs-menu-icon">📄</span><span class="docs-menu-label">123/2020 <span class="docs-menu-date">(01-Jan-2020)</span><span class="docs-menu-sub">கிரையம் — விற்றவர் → வாங்கியவர்</span></span><span class="docs-link-arr">↗</span></a>
+      -->
+    </div>
+  </div>
+</div>
+
+<!-- ── STATS BAR ── -->
+<div class="stats-bar" id="statsBar">
+  <span class="stat-chip stat-total"><span class="lbl-full">மொத்த பிளாட்டுகள்</span><span class="lbl-short">Total</span> : <b id="statTotal">55</b></span>
+  <span class="stat-chip stat-sold"><span class="lbl-full">விற்பனையானவை</span><span class="lbl-short">Sold</span> : <b id="statSold">0</b></span>
+  <span class="stat-chip stat-resale"><span class="lbl-full">மறுவிற்பனை ஆனவை</span><span class="lbl-short">Resold</span> : <b id="statResale">0</b></span>
+  <button type="button" class="stat-chip stat-double" id="statDoubleChip" onClick="showDoubleEntries()" title="Double Entry பிளாட்டுகளைக் காட்டு"><span class="lbl-full">Double Entry</span><span class="lbl-short">Double</span> : <b id="statDouble">0</b></button>
+  <span class="stat-chip stat-avail"><span class="lbl-full">இருப்பு</span><span class="lbl-short">Balance</span> : <b id="statAvail">0</b></span>
+</div>
+
+<!-- ── SEARCH ── -->
+<div class="search-section" id="searchSection">
+  <div class="search-type-row">
+    <span class="search-type-label">🔍 தேடல்:</span>
+    <button class="stab active" id="stab-plot"   onclick="setSearchType('plot')">🏷️ Plot No</button>
+    <button class="stab"        id="stab-doc"    onclick="setSearchType('doc')">📄 Doc.No</button>
+    <button class="stab"        id="stab-survey" onClick="setSearchType('survey')">🗺️ Survey No</button>
+    <button class="stab"        id="stab-name"   onclick="setSearchType('name')">👤 பெயர்</button>
+  </div>
+  <div class="search-input-row">
+    <input type="text" class="search-input" id="searchInput"
+      placeholder="Plot எண் உள்ளிடுங்கள்... (எ.கா: 22)"
+      oninput="doSearch(this.value)" autocomplete="off">
+    <button class="clear-btn" id="clearBtn" onClick="clearSearch()">✕ Clear</button>
+  </div>
+</div>
+
+<!-- ── RESULTS ── -->
+<div class="results-panel" id="resultsPanel"></div>
+
+<!-- ── MAP ── -->
+<div class="map-outer">
+  <div class="map-wrapper" id="wrapper">
+    <div class="map-inner" id="inner">
+      <!-- வரைபடம் Dropbox-ல் இருந்து ஏறும். Offline-ல் பயன்படுத்த Plot_Map-Model.webp கோப்பை இந்த HTML உள்ள அதே folder-ல் வைக்கவும் (தானாக அதை எடுக்கும்). -->
+      <img id="plotImg"
+           src="https://Plot_Map-Model.webp"
+           alt="Margoschis Nagar Plot Map" usemap="#Map">
+      <svg id="svgOverlay" xmlns="http://www.w3.org/2000/svg">
+        <polygon id="plotHighlight" points=""></polygon>
+      </svg>
+      <div class="map-error" id="mapError"><b>வரைபடப் படம் திறக்கவில்லை.</b><br>இணைய இணைப்பைச் சரிபார்க்கவும்; அல்லது Plot_Map-Model.webp கோப்பை இந்த HTML கோப்பு உள்ள அதே folder-ல் வைத்து மீண்டும் திறக்கவும்.<br>மேலே உள்ள தேடல் மூலம் விவரங்களைத் தொடர்ந்து பார்க்கலாம்.</div>
+      <!-- ═══ AREA POLY COORDS ═══  (55 plots; படத்தின் அளவு 7016 x 4958 px அடிப்படையில்) -->
+      <map name="Map" id="Map">
+        <area shape="poly" data-plot="1" data-coords="1474,3669,1460,4106,1512,4160,1874,4160,1874,3669" coords="1474,3669,1460,4106,1512,4160,1874,4160,1874,3669" href="javascript:void(0)" alt="Plot 1" title="Plot 1">
+        <area shape="poly" data-plot="2" data-coords="2207,3669,1874,3669,1874,4160,2207,4160" coords="2207,3669,1874,3669,1874,4160,2207,4160" href="javascript:void(0)" alt="Plot 2" title="Plot 2">
+        <area shape="poly" data-plot="3" data-coords="2541,3669,2207,3669,2207,4160,2541,4161" coords="2541,3669,2207,3669,2207,4160,2541,4161" href="javascript:void(0)" alt="Plot 3" title="Plot 3">
+        <area shape="poly" data-plot="4" data-coords="2875,3669,2541,3669,2541,4161,2875,4161" coords="2875,3669,2541,3669,2541,4161,2875,4161" href="javascript:void(0)" alt="Plot 4" title="Plot 4">
+        <area shape="poly" data-plot="5" data-coords="3312,3669,2875,3669,2875,4161,3258,4161,3312,4107" coords="3312,3669,2875,3669,2875,4161,3258,4161,3312,4107" href="javascript:void(0)" alt="Plot 5" title="Plot 5">
+        <area shape="poly" data-plot="6" data-coords="4115,3669,3677,3669,3677,4107,3731,4161,4115,4161" coords="4115,3669,3677,3669,3677,4107,3731,4161,4115,4161" href="javascript:void(0)" alt="Plot 6" title="Plot 6">
+        <area shape="poly" data-plot="7" data-coords="4448,3669,4115,3669,4115,4161,4448,4161" coords="4448,3669,4115,3669,4115,4161,4448,4161" href="javascript:void(0)" alt="Plot 7" title="Plot 7">
+        <area shape="poly" data-plot="8" data-coords="4782,3669,4448,3669,4448,4161,4782,4161" coords="4782,3669,4448,3669,4448,4161,4782,4161" href="javascript:void(0)" alt="Plot 8" title="Plot 8">
+        <area shape="poly" data-plot="9" data-coords="5115,3669,4782,3669,4782,4161,5115,4161" coords="5115,3669,4782,3669,4782,4161,5115,4161" href="javascript:void(0)" alt="Plot 9" title="Plot 9">
+        <area shape="poly" data-plot="10" data-coords="5449,3669,5115,3669,5115,4161,5449,4161" coords="5449,3669,5115,3669,5115,4161,5449,4161" href="javascript:void(0)" alt="Plot 10" title="Plot 10">
+        <area shape="poly" data-plot="11" data-coords="5757,4161,5805,3669,5449,3669,5449,4161" coords="5757,4161,5805,3669,5449,3669,5449,4161" href="javascript:void(0)" alt="Plot 11" title="Plot 11">
+        <area shape="poly" data-plot="12" data-coords="5805,3669,5849,3224,5449,3224,5449,3669" coords="5805,3669,5849,3224,5449,3224,5449,3669" href="javascript:void(0)" alt="Plot 12" title="Plot 12">
+        <area shape="poly" data-plot="13" data-coords="5115,3669,5449,3669,5449,3224,5115,3224" coords="5115,3669,5449,3669,5449,3224,5115,3224" href="javascript:void(0)" alt="Plot 13" title="Plot 13">
+        <area shape="poly" data-plot="14" data-coords="4782,3669,5115,3669,5115,3224,4782,3224" coords="4782,3669,5115,3669,5115,3224,4782,3224" href="javascript:void(0)" alt="Plot 14" title="Plot 14">
+        <area shape="poly" data-plot="15" data-coords="4448,3669,4782,3669,4782,3224,4448,3224" coords="4448,3669,4782,3669,4782,3224,4448,3224" href="javascript:void(0)" alt="Plot 15" title="Plot 15">
+        <area shape="poly" data-plot="16" data-coords="4115,3669,4448,3669,4448,3224,4115,3224" coords="4115,3669,4448,3669,4448,3224,4115,3224" href="javascript:void(0)" alt="Plot 16" title="Plot 16">
+        <area shape="poly" data-plot="17" data-coords="3677,3669,4115,3669,4115,3224,3732,3224,3677,3279" coords="3677,3669,4115,3669,4115,3224,3732,3224,3677,3279" href="javascript:void(0)" alt="Plot 17" title="Plot 17">
+        <area shape="poly" data-plot="18" data-coords="2875,3224,2875,3669,3312,3669,3312,3279,3258,3224" coords="2875,3224,2875,3669,3312,3669,3312,3279,3258,3224" href="javascript:void(0)" alt="Plot 18" title="Plot 18">
+        <area shape="poly" data-plot="19" data-coords="2875,3224,2541,3224,2541,3669,2875,3669" coords="2875,3224,2541,3224,2541,3669,2875,3669" href="javascript:void(0)" alt="Plot 19" title="Plot 19">
+        <area shape="poly" data-plot="20" data-coords="2541,3224,2207,3224,2207,3669,2541,3669" coords="2541,3224,2207,3224,2207,3669,2541,3669" href="javascript:void(0)" alt="Plot 20" title="Plot 20">
+        <area shape="poly" data-plot="21" data-coords="2207,3224,1874,3224,1874,3669,2207,3669" coords="2207,3224,1874,3224,1874,3669,2207,3669" href="javascript:void(0)" alt="Plot 21" title="Plot 21">
+        <area shape="poly" data-plot="22" data-coords="1543,3224,1486,3279,1474,3669,1874,3669,1874,3224" coords="1543,3224,1486,3279,1474,3669,1874,3669,1874,3224" href="javascript:void(0)" alt="Plot 22" title="Plot 22">
+        <area shape="poly" data-plot="23" data-coords="1874,2962,1874,2517,1510,2517,1498,2907,1551,2962" coords="1874,2962,1874,2517,1510,2517,1498,2907,1551,2962" href="javascript:void(0)" alt="Plot 23" title="Plot 23">
+        <area shape="poly" data-plot="24" data-coords="2207,2962,2207,2517,1874,2517,1874,2962" coords="2207,2962,2207,2517,1874,2517,1874,2962" href="javascript:void(0)" alt="Plot 24" title="Plot 24">
+        <area shape="poly" data-plot="25" data-coords="2541,2962,2541,2517,2207,2517,2207,2962" coords="2541,2962,2541,2517,2207,2517,2207,2962" href="javascript:void(0)" alt="Plot 25" title="Plot 25">
+        <area shape="poly" data-plot="26" data-coords="2875,2962,2875,2517,2541,2517,2541,2962" coords="2875,2962,2875,2517,2541,2517,2541,2962" href="javascript:void(0)" alt="Plot 26" title="Plot 26">
+        <area shape="poly" data-plot="27" data-coords="3312,2907,3312,2517,2875,2517,2875,2962,3258,2962" coords="3312,2907,3312,2517,2875,2517,2875,2962,3258,2962" href="javascript:void(0)" alt="Plot 27" title="Plot 27">
+        <area shape="poly" data-plot="28" data-coords="3677,2517,3677,2907,3732,2962,4122,2962,4122,2517" coords="3677,2517,3677,2907,3732,2962,4122,2962,4122,2517" href="javascript:void(0)" alt="Plot 28" title="Plot 28">
+        <area shape="poly" data-plot="29" data-coords="4122,2517,4122,2962,4456,2962,4456,2517" coords="4122,2517,4122,2962,4456,2962,4456,2517" href="javascript:void(0)" alt="Plot 29" title="Plot 29">
+        <area shape="poly" data-plot="30" data-coords="4456,2517,4456,2962,4789,2962,4789,2517" coords="4456,2517,4456,2962,4789,2962,4789,2517" href="javascript:void(0)" alt="Plot 30" title="Plot 30">
+        <area shape="poly" data-plot="31" data-coords="4789,2517,4789,2962,5123,2962,5123,2517" coords="4789,2517,4789,2962,5123,2962,5123,2517" href="javascript:void(0)" alt="Plot 31" title="Plot 31">
+        <area shape="poly" data-plot="32" data-coords="5123,2517,5123,2962,5457,2962,5457,2517" coords="5123,2517,5123,2962,5457,2962,5457,2517" href="javascript:void(0)" alt="Plot 32" title="Plot 32">
+        <area shape="poly" data-plot="33" data-coords="5457,2517,5457,2962,5685,2962,5685,2517" coords="5457,2517,5457,2962,5685,2962,5685,2517" href="javascript:void(0)" alt="Plot 33" title="Plot 33">
+        <area shape="poly" data-plot="34" data-coords="5875,2962,5919,2517,5685,2517,5685,2962" coords="5875,2962,5919,2517,5685,2517,5685,2962" href="javascript:void(0)" alt="Plot 34" title="Plot 34">
+        <area shape="poly" data-plot="35" data-coords="5728,2072,5457,2072,5457,2517,5919,2517,5948,2229,5727,2212" coords="5728,2072,5457,2072,5457,2517,5919,2517,5948,2229,5727,2212" href="javascript:void(0)" alt="Plot 35" title="Plot 35">
+        <area shape="poly" data-plot="36" data-coords="5457,2072,5123,2072,5123,2517,5457,2517" coords="5457,2072,5123,2072,5123,2517,5457,2517" href="javascript:void(0)" alt="Plot 36" title="Plot 36">
+        <area shape="poly" data-plot="37" data-coords="5123,2072,4789,2072,4789,2517,5123,2517" coords="5123,2072,4789,2072,4789,2517,5123,2517" href="javascript:void(0)" alt="Plot 37" title="Plot 37">
+        <area shape="poly" data-plot="38" data-coords="4789,2072,4456,2072,4456,2517,4789,2517" coords="4789,2072,4456,2072,4456,2517,4789,2517" href="javascript:void(0)" alt="Plot 38" title="Plot 38">
+        <area shape="poly" data-plot="39" data-coords="4456,2072,4122,2072,4122,2517,4456,2517" coords="4456,2072,4122,2072,4122,2517,4456,2517" href="javascript:void(0)" alt="Plot 39" title="Plot 39">
+        <area shape="poly" data-plot="40" data-coords="3732,2072,3677,2127,3677,2517,4122,2517,4122,2072" coords="3732,2072,3677,2127,3677,2517,4122,2517,4122,2072" href="javascript:void(0)" alt="Plot 40" title="Plot 40">
+        <area shape="poly" data-plot="41" data-coords="2875,2072,2875,2517,3312,2517,3312,2127,3258,2072" coords="2875,2072,2875,2517,3312,2517,3312,2127,3258,2072" href="javascript:void(0)" alt="Plot 41" title="Plot 41">
+        <area shape="poly" data-plot="42" data-coords="2875,2072,2541,2072,2541,2517,2875,2517" coords="2875,2072,2541,2072,2541,2517,2875,2517" href="javascript:void(0)" alt="Plot 42" title="Plot 42">
+        <area shape="poly" data-plot="43" data-coords="2541,2072,2207,2072,2207,2517,2541,2517" coords="2541,2072,2207,2072,2207,2517,2541,2517" href="javascript:void(0)" alt="Plot 43" title="Plot 43">
+        <area shape="poly" data-plot="44" data-coords="2207,2072,1874,2072,1874,2517,2207,2517" coords="2207,2072,1874,2072,1874,2517,2207,2517" href="javascript:void(0)" alt="Plot 44" title="Plot 44">
+        <area shape="poly" data-plot="45" data-coords="1581,2072,1522,2127,1510,2517,1874,2517,1874,2072" coords="1581,2072,1522,2127,1510,2517,1874,2517,1874,2072" href="javascript:void(0)" alt="Plot 45" title="Plot 45">
+        <area shape="poly" data-plot="46" data-coords="1521,1251,1528,1690,1584,1745,1883,1745,1883,1270" coords="1521,1251,1528,1690,1584,1745,1883,1745,1883,1270" href="javascript:void(0)" alt="Plot 46" title="Plot 46">
+        <area shape="poly" data-plot="47" data-coords="1883,1270,1883,1745,2200,1745,2200,1287" coords="1883,1270,1883,1745,2200,1745,2200,1287" href="javascript:void(0)" alt="Plot 47" title="Plot 47">
+        <area shape="poly" data-plot="48" data-coords="2200,1287,2200,1745,2557,1745,2557,1307" coords="2200,1287,2200,1745,2557,1745,2557,1307" href="javascript:void(0)" alt="Plot 48" title="Plot 48">
+        <area shape="poly" data-plot="49" data-coords="2658,1315,2557,1307,2557,1745,2955,1745,2955,1327" coords="2658,1315,2557,1307,2557,1745,2955,1745,2955,1327" href="javascript:void(0)" alt="Plot 49" title="Plot 49">
+        <area shape="poly" data-plot="50" data-coords="2955,1327,2955,1745,3258,1745,3312,1690,3312,1341" coords="2955,1327,2955,1745,3258,1745,3312,1690,3312,1341" href="javascript:void(0)" alt="Plot 50" title="Plot 50">
+        <area shape="poly" data-plot="51" data-coords="3677,1355,3677,1690,3732,1745,3932,1745,3932,1365" coords="3677,1355,3677,1690,3732,1745,3932,1745,3932,1365" href="javascript:void(0)" alt="Plot 51" title="Plot 51">
+        <area shape="poly" data-plot="52" data-coords="4162,1745,4162,1374,3932,1365,3932,1745" coords="4162,1745,4162,1374,3932,1365,3932,1745" href="javascript:void(0)" alt="Plot 52" title="Plot 52">
+        <area shape="poly" data-plot="53" data-coords="4162,1374,4162,1745,4599,1745,4599,1392" coords="4162,1374,4162,1745,4599,1745,4599,1392" href="javascript:void(0)" alt="Plot 53" title="Plot 53">
+        <area shape="poly" data-plot="54" data-coords="4599,1392,4599,1745,5037,1745,5037,1409" coords="4599,1392,4599,1745,5037,1745,5037,1409" href="javascript:void(0)" alt="Plot 54" title="Plot 54">
+        <area shape="poly" data-plot="55" data-coords="5423,1745,5423,1424,5037,1409,5037,1745" coords="5423,1745,5423,1424,5037,1409,5037,1745" href="javascript:void(0)" alt="Plot 55" title="Plot 55">
+      </map>
+    </div>
+  </div>
+</div>
+
+<!-- ── TOOLTIP ── -->
+<div class="tip-box" id="tipBox">
+  <div class="tip-title">
+    <span id="tipTitle"></span>
+    <button class="tip-close" onClick="hideTip()">✕ Close</button>
+  </div>
+  <div class="tip-body" id="tipBody"></div>
+</div>
+
+<div class="footer">Margoschis Nagar (மர்காஷியஸ் நகர்) — Plot Map | நாசரேத் கிராமம், நாசரேத் SRO | Updated: 22-11-2026<br>
+இந்த விவரங்கள் பதிவுக்குத் தாக்கல் செய்யப்பட்ட ஆவணங்களின் Merged Preview-ல் உள்ள தகவலை அடிப்படையாகக் கொண்டவை; பதிவு முடிந்ததும் Doc.No மற்றும் Download link சேர்க்கப்படும். இது சட்டக் கருத்து அல்ல.</div>
+
+<script>
+/* ================= PLOT DATA =================
+   தற்போது 16 பிளாட்டுகள் (10, 11, 12, 13, 30, 32, 33, 34, 41, 42, 43, 48, 49, 50, 51, 52) – 13 Merged Preview ஆவணங்களின்படி.
+   ★ பதிவு முடிந்ததும்: அந்த பிளாட்டின் வரியில்  "doc":""  என்பதை  "doc":"1234/2026"  என்றும்,  "link":""  என்பதில் Download link-ஐயும் நிரப்பவும்
+     (ஒரே ஆவணத்தில் 2 பிளாட் இருந்தால் இரண்டு வரிகளிலும்). doc காலியாக இருக்கும் வரை tooltip-ல் "Doc.No ____/2026 – பதிவு நிலுவையில்" என்று காட்டும்.
+   m = நான்கு பக்க அளவுகள் (n வடக்கு, s தெற்கு, e கிழக்கு, w மேற்கு) ; b = நான்கு எல்கைகள் ; exeList = எழுதிக் கொடுப்பவர்கள் ; claimList = எழுதி வாங்குபவர்கள் (cell = கைபேசி எண்) ; price = சொத்தின் கிரையம் ; mv = மதிப்பு.
+   கீழே உள்ள பழைய மாதிரி வடிவமும் (m, b இல்லாமல்) வேலை செய்யும். புதிய பிளாட்டிற்கு PLOTS = [ ... ] -க்குள் ஒரு பதிவு சேர்க்கவும்
+   (பதிவுகளுக்கு இடையில் கமா , வேண்டும்). பதிவு இல்லாத பிளாட்டில் "விற்பனை விபரம் இன்னும் பதிவு செய்யப்படவில்லை" என்று காட்டும்.
+   tx[] = அந்த பிளாட்டின் அனைத்து ஆவணப் பதிவுகளும் கால வரிசையில்.  tx[i].link-ல் ஆவண PDF link சேர்த்தால் ⬇ button வரும்.
+   owner = கடைசியாக கிரையம்/உரிமை பெற்றவர்.  flag = ok | warn (Verification Required) | bad (இருமுறை விற்பனை / தடை).
+   all_names = தமிழ்ப் பெயர்கள் ( | குறியால் பிரித்து) ; eng = அதே பெயர்கள் ஆங்கில எழுத்தில் (பெயர் தேடலுக்கு).
+
+   மாதிரி:
+   {"n":"1","title":"MARGOSCHIS NAGAR - PLOT - 1","survey":"163/6A1H","extent":"ச.மீ. 104.00",
+    "owner":"வாங்கியவர் பெயர் (123/2026)","first":"123/2026 – 01-Jan-2026",
+    "tx":[{"doc":"123/2026","date":"01-Jan-2026","nature":"கிரையம்","survey":"163/6A1H","extent":"ச.மீ. 104.00",
+           "exe":"விற்றவர் பெயர்","claim":"வாங்கியவர் பெயர்","pr":"45/2020",
+           "bnd":"வ: பிளாட் 22; கி: பிளாட் 2; தெ: 10.00மீ சாலை; மே: 6.50மீ சாலை",
+           "vs":"Verified","flag":"ok","bndv":"","rem":"","ec":"","part":"","link":""}],
+    "note":"","flag":"ok","all_names":"விற்றவர் பெயர் | வாங்கியவர் பெயர்","eng":"virravar peyar | vaangiyavar peyar"}
+*/
+var PLOTS = [
+{"n": "10", "title": "MARGOSCHIS NAGAR - PLOT - 10", "survey": "163/6A1J", "patta": "5615", "extent": "118.04 ச.மீ (1270.52 ச.அடி / 2.92 செண்டு)", "sqm": "118.04", "sqft": "1270.52", "cent": "2.92", "shape": "", "m": {"n": "9.15", "s": "9.15", "e": "13.00", "w": "12.80"}, "b": {"n": "பிளாட் எண் 13", "e": "பிளாட் எண் 11", "s": "10.00 மீ அகல கிழமேல் நிலையிலுள்ள CSI ஜெயராஜ் அன்னபாக்கியம் சாலை", "w": "பிளாட் எண் 9"}, "owner": "தங்கபேராச்சி", "first": "09-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/324424643/2026", "date": "09-11-2026", "nature": "கிரையம்", "survey": "163/6A1J", "extent": "118.04 ச.மீ (1270.52 ச.அடி / 2.92 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "தங்கபேராச்சி த/பெ முருகேசன்", "claimList": [{"name": "தங்கபேராச்சி த/பெ முருகேசன்", "place": "மகாராஜநகர், பாளையங்கோட்டை", "agent": "பொது அதிகார முகவர்: முருகேசன் த/பெ மூக்கன் (PoA 6/2021, புத்தகம் 4, பாளையங்கோட்டை 1 எண் இணை சார்பதிவகம், 12-01-2021)", "cell": "9790290896"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/324424643/2026 (அட்டவணை 1)", "part": "அட்டவணை 1"}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | தங்கபேராச்சி | முருகேசன் | மூக்கன்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | thangkaperaassi | thangaperachi | murukesan | murugesan | mookkan", "price": "3,00,000", "priceNote": "", "mv": "3,67,200"},
+{"n": "11", "title": "MARGOSCHIS NAGAR - PLOT - 11", "survey": "163/6A1J", "patta": "5615", "extent": "122.11 ச.மீ (1314.43 ச.அடி / 3.02 செண்டு)", "sqm": "122.11", "sqft": "1314.43", "cent": "3.02", "shape": "", "m": {"n": "9.22", "s": "9.15", "e": "13.59", "w": "13.00"}, "b": {"n": "பிளாட் எண் 12", "e": "அ.பு.ச. 163/6B-ல் உள்ள நிலம்", "s": "10.00 மீ அகல கிழமேல் நிலையிலுள்ள CSI ஜெயராஜ் அன்னபாக்கியம் சாலை", "w": "பிளாட் எண் 10"}, "owner": "தங்கபேராச்சி", "first": "09-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/324424643/2026", "date": "09-11-2026", "nature": "கிரையம்", "survey": "163/6A1J", "extent": "122.11 ச.மீ (1314.43 ச.அடி / 3.02 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "தங்கபேராச்சி த/பெ முருகேசன்", "claimList": [{"name": "தங்கபேராச்சி த/பெ முருகேசன்", "place": "மகாராஜநகர், பாளையங்கோட்டை", "agent": "பொது அதிகார முகவர்: முருகேசன் த/பெ மூக்கன் (PoA 6/2021, புத்தகம் 4, பாளையங்கோட்டை 1 எண் இணை சார்பதிவகம், 12-01-2021)", "cell": "9790290896"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/324424643/2026 (அட்டவணை 2)", "part": "அட்டவணை 2"}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | தங்கபேராச்சி | முருகேசன் | மூக்கன்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | thangkaperaassi | thangaperachi | murukesan | murugesan | mookkan", "price": "3,00,000", "priceNote": "", "mv": "3,79,800"},
+{"n": "12", "title": "MARGOSCHIS NAGAR - PLOT - 12", "survey": "163/6A1G, 163/6A1J", "patta": "5615, 5617", "extent": "112.36 ச.மீ (1206.45 ச.அடி / 2.78 செண்டு)", "sqm": "112.36", "sqft": "1206.45", "cent": "2.78", "shape": "", "m": {"n": "9.50", "s": "9.22", "e": "12.20", "w": "12.20"}, "b": {"n": "7.20 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "e": "அ.பு.ச. 163/6B-ல் உள்ள நிலம்", "s": "பிளாட் எண் 11", "w": "பிளாட் எண் 13"}, "owner": "தங்கபேராச்சி", "first": "09-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/324431883/2026", "date": "09-11-2026", "nature": "கிரையம்", "survey": "163/6A1G, 163/6A1J", "extent": "112.36 ச.மீ (1206.45 ச.அடி / 2.78 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "தங்கபேராச்சி த/பெ முருகேசன்", "claimList": [{"name": "தங்கபேராச்சி த/பெ முருகேசன்", "place": "மகாராஜநகர், பாளையங்கோட்டை", "agent": "பொது அதிகார முகவர்: முருகேசன் த/பெ மூக்கன் (PoA 6/2021, புத்தகம் 4, பாளையங்கோட்டை 1 எண் இணை சார்பதிவகம், 12-01-2021)", "cell": "9790290896"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/324431883/2026 (அட்டவணை 1)", "part": "அட்டவணை 1"}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | தங்கபேராச்சி | முருகேசன் | மூக்கன்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | thangkaperaassi | thangaperachi | murukesan | murugesan | mookkan", "price": "3,00,000", "priceNote": "", "mv": "3,49,500"},
+{"n": "13", "title": "MARGOSCHIS NAGAR - PLOT - 13", "survey": "163/6A1G, 163/6A1J", "patta": "5615, 5617", "extent": "111.63 ச.மீ (1201.57 ச.அடி / 2.76 செண்டு)", "sqm": "111.63", "sqft": "1201.57", "cent": "2.76", "shape": "", "m": {"n": "9.15", "s": "9.15", "e": "12.20", "w": "12.20"}, "b": {"n": "7.20 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "e": "பிளாட் எண் 12", "s": "பிளாட் எண் 10", "w": "பிளாட் எண் 14"}, "owner": "தங்கபேராச்சி", "first": "09-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/324431883/2026", "date": "09-11-2026", "nature": "கிரையம்", "survey": "163/6A1G, 163/6A1J", "extent": "111.63 ச.மீ (1201.57 ச.அடி / 2.76 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "தங்கபேராச்சி த/பெ முருகேசன்", "claimList": [{"name": "தங்கபேராச்சி த/பெ முருகேசன்", "place": "மகாராஜநகர், பாளையங்கோட்டை", "agent": "பொது அதிகார முகவர்: முருகேசன் த/பெ மூக்கன் (PoA 6/2021, புத்தகம் 4, பாளையங்கோட்டை 1 எண் இணை சார்பதிவகம், 12-01-2021)", "cell": "9790290896"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/324431883/2026 (அட்டவணை 2)", "part": "அட்டவணை 2"}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | தங்கபேராச்சி | முருகேசன் | மூக்கன்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | thangkaperaassi | thangaperachi | murukesan | murugesan | mookkan", "price": "3,00,000", "priceNote": "", "mv": "3,47,300"},
+{"n": "30", "title": "MARGOSCHIS NAGAR - PLOT - 30", "survey": "163/6A1G", "patta": "5617", "extent": "112.18 ச.மீ (1207.49 ச.அடி / 2.77 செண்டு)", "sqm": "112.18", "sqft": "1207.49", "cent": "2.77", "shape": "", "m": {"n": "9.15", "s": "9.15", "e": "12.26", "w": "12.26"}, "b": {"n": "பிளாட் எண் 38", "e": "பிளாட் எண் 31", "s": "7.20 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "w": "பிளாட் எண் 29"}, "owner": "பேரின்பராஜ் லாசரஸ்", "first": "11-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/325038492/2026", "date": "11-11-2026", "nature": "கிரையம்", "survey": "163/6A1G", "extent": "112.18 ச.மீ (1207.49 ச.அடி / 2.77 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "பேரின்பராஜ் லாசரஸ் த/பெ மாற்கு ஜாண்சன்", "claimList": [{"name": "பேரின்பராஜ் லாசரஸ் த/பெ மாற்கு ஜாண்சன்", "place": "நாசரேத்", "agent": "", "cell": "8220728204"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/325038492/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | பேரின்பராஜ் லாசரஸ் | மாற்கு ஜாண்சன்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | perinparaaj laasaras | perinbaraj lazarus | maarku jaansan | mark johnson", "price": "3,00,000", "priceNote": "", "mv": "3,49,000"},
+{"n": "32", "title": "MARGOSCHIS NAGAR - PLOT - 32", "survey": "163/6A1G", "patta": "5617", "extent": "112.18 ச.மீ (1207.49 ச.அடி / 2.77 செண்டு)", "sqm": "112.18", "sqft": "1207.49", "cent": "2.77", "shape": "", "m": {"n": "9.15", "s": "9.15", "e": "12.26", "w": "12.26"}, "b": {"n": "பிளாட் எண் 36", "e": "பிளாட் எண் 33", "s": "7.20 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "w": "பிளாட் எண் 31"}, "owner": "ராஜாநேரு", "first": "19-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/327977122/2026", "date": "19-11-2026", "nature": "கிரையம்", "survey": "163/6A1G", "extent": "112.18 ச.மீ (1207.49 ச.அடி / 2.77 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "ராஜாநேரு த/பெ மலையப்பன்", "claimList": [{"name": "ராஜாநேரு த/பெ மலையப்பன்", "place": "தோப்பூர், திருச்செந்தூர்", "agent": "", "cell": "8610498669"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/327977122/2026 (அட்டவணை 1)", "part": "அட்டவணை 1"}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | ராஜாநேரு | மலையப்பன்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | raajaaneru | rajanehru | raja nehru | malaiyappan", "price": "2,50,000", "priceNote": "", "mv": "3,48,900"},
+{"n": "33", "title": "MARGOSCHIS NAGAR - PLOT - 33", "survey": "163/6A1G", "patta": "5617", "extent": "76.32 ச.மீ (821.50 ச.அடி / 1.89 செண்டு)", "sqm": "76.32", "sqft": "821.50", "cent": "1.89", "shape": "", "m": {"n": "6.25", "s": "6.20", "e": "12.26", "w": "12.26"}, "b": {"n": "பிளாட் எண் 35", "e": "பிளாட் எண் 34", "s": "7.20 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "w": "பிளாட் எண் 32"}, "owner": "ராஜாநேரு", "first": "19-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/327977122/2026", "date": "19-11-2026", "nature": "கிரையம்", "survey": "163/6A1G", "extent": "76.32 ச.மீ (821.50 ச.அடி / 1.89 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "ராஜாநேரு த/பெ மலையப்பன்", "claimList": [{"name": "ராஜாநேரு த/பெ மலையப்பன்", "place": "தோப்பூர், திருச்செந்தூர்", "agent": "", "cell": "8610498669"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/327977122/2026 (அட்டவணை 2)", "part": "அட்டவணை 2"}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | ராஜாநேரு | மலையப்பன்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | raajaaneru | rajanehru | raja nehru | malaiyappan", "price": "2,50,000", "priceNote": "", "mv": "2,37,400"},
+{"n": "34", "title": "MARGOSCHIS NAGAR - PLOT - 34", "survey": "163/6A1G", "patta": "5617", "extent": "78.16 ச.மீ (841.28 ச.அடி / 1.93 செண்டு)", "sqm": "78.16", "sqft": "841.28", "cent": "1.93", "shape": "", "m": {"n": "6.55", "s": "6.20", "e": "12.26", "w": "12.26"}, "b": {"n": "பிளாட் எண் 35", "e": "அ.பு.ச. 163/6-ல் உள்ள நிலம்", "s": "7.20 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "w": "பிளாட் எண் 33"}, "owner": "நம்பிமாடசாமி தி", "first": "19-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/328390482/2026", "date": "19-11-2026", "nature": "கிரையம்", "survey": "163/6A1G", "extent": "78.16 ச.மீ (841.28 ச.அடி / 1.93 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "நம்பிமாடசாமி தி த/பெ திருமலைநம்பி", "claimList": [{"name": "நம்பிமாடசாமி தி த/பெ திருமலைநம்பி", "place": "வல்லகுளம், ஸ்ரீவைகுண்டம் வட்டம்", "agent": "", "cell": "9361215973"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/328390482/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | நம்பிமாடசாமி தி | திருமலைநம்பி", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | nampimaatasaami | nambi madasami | nambimadasamy | thirumalainampi | thirumalainambi", "price": "2,00,000", "priceNote": "", "mv": "2,43,100"},
+{"n": "41", "title": "MARGOSCHIS NAGAR - PLOT - 41", "survey": "163/6A1B, 163/6A1D, 163/6A1F", "patta": "5242, 5614, 5616", "extent": "146.48 ச.மீ (1576.69 ச.அடி / 3.62 செண்டு) – வடகிழக்கு மூலை முடக்கு 1.50 மீ x 1.50 மீ நீங்கலாக", "sqm": "146.48", "sqft": "1576.69", "cent": "3.62", "shape": "வடகிழக்கு மூலை முடக்கு 1.50 மீ x 1.50 மீ நீங்கலாக", "m": {"n": "12.00", "s": "12.00", "e": "12.30", "w": "12.30"}, "b": {"n": "9.00 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "e": "10.00 மீ அகல தென்வடல் மனைப்பிரிவு சாலை", "s": "பிளாட் எண் 27", "w": "பிளாட் எண் 42"}, "owner": "சத்தியப்பிரியா", "first": "29-10-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/321037042/2026", "date": "29-10-2026", "nature": "கிரையம்", "survey": "163/6A1B, 163/6A1D, 163/6A1F", "extent": "146.48 ச.மீ (1576.69 ச.அடி / 3.62 செண்டு) – வடகிழக்கு மூலை முடக்கு 1.50 மீ x 1.50 மீ நீங்கலாக", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "சத்தியப்பிரியா க/பெ மகேந்திரன்", "claimList": [{"name": "சத்தியப்பிரியா க/பெ மகேந்திரன்", "place": "மகராஜநகர், பாளையங்கோட்டை", "agent": "", "cell": "6381431068"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/321037042/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | சத்தியப்பிரியா | மகேந்திரன்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | saththiyappiriyaa | sathiyapriya | sathyapriya | makenthiran | mahendran", "price": "3,00,000", "priceNote": "", "mv": "4,55,600"},
+{"n": "42", "title": "MARGOSCHIS NAGAR - PLOT - 42", "survey": "163/6A1A, 163/6A1B, 163/6A1D, 163/6A1E, 163/6A1F", "patta": "5242, 5613, 5614, 5616", "extent": "112.36 ச.மீ (1209.43 ச.அடி / 2.78 செண்டு)", "sqm": "112.36", "sqft": "1209.43", "cent": "2.78", "shape": "", "m": {"n": "9.15", "s": "9.15", "e": "12.30", "w": "12.26"}, "b": {"n": "9.00 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "e": "பிளாட் எண் 41", "s": "பிளாட் எண் 26", "w": "பிளாட் எண் 43"}, "owner": "சத்தியப்பிரியா", "first": "29-10-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/321069002/2026", "date": "29-10-2026", "nature": "கிரையம்", "survey": "163/6A1A, 163/6A1B, 163/6A1D, 163/6A1E, 163/6A1F", "extent": "112.36 ச.மீ (1209.43 ச.அடி / 2.78 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "சத்தியப்பிரியா க/பெ மகேந்திரன்", "claimList": [{"name": "சத்தியப்பிரியா க/பெ மகேந்திரன்", "place": "மகராஜநகர், பாளையங்கோட்டை", "agent": "", "cell": "6381431068"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/321069002/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | சத்தியப்பிரியா | மகேந்திரன்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | saththiyappiriyaa | sathiyapriya | sathyapriya | makenthiran | mahendran", "price": "2,60,000", "priceNote": "", "mv": "3,50,000"},
+{"n": "43", "title": "MARGOSCHIS NAGAR - PLOT - 43", "survey": "163/6A1A, 163/6A1D, 163/6A1E", "patta": "5242, 5613, 5614", "extent": "112.18 ச.மீ (1207.49 ச.அடி / 2.77 செண்டு)", "sqm": "112.18", "sqft": "1207.49", "cent": "2.77", "shape": "", "m": {"n": "9.15", "s": "9.15", "e": "12.26", "w": "12.26"}, "b": {"n": "9.00 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "e": "பிளாட் எண் 42", "s": "பிளாட் எண் 25", "w": "பிளாட் எண் 44"}, "owner": "சு. நாராயணன்", "first": "07-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/324295004/2026", "date": "07-11-2026", "nature": "கிரையம்", "survey": "163/6A1A, 163/6A1D, 163/6A1E", "extent": "112.18 ச.மீ (1207.49 ச.அடி / 2.77 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "சு. நாராயணன் த/பெ சுடலையான்டி", "claimList": [{"name": "சு. நாராயணன் த/பெ சுடலையான்டி", "place": "சாத்தான்குளம்", "agent": "", "cell": "8344802450"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/324295004/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | சு. நாராயணன் | சுடலையான்டி", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | su. naaraayanan | narayanan | sutalaiyaanti | sudalaiyandi", "price": "3,00,000", "priceNote": "", "mv": "3,49,000"},
+{"n": "48", "title": "MARGOSCHIS NAGAR - PLOT - 48", "survey": "163/11A2", "patta": "5613", "extent": "138.36 ச.மீ (1489.26 ச.அடி / 3.42 செண்டு)", "sqm": "138.36", "sqft": "1489.26", "cent": "3.42", "shape": "", "m": {"n": "9.86", "s": "9.80", "e": "13.80", "w": "14.35"}, "b": {"n": "அ.பு.ச. 163/5B மற்றும் 163/4A-ல் உள்ள நிலம்", "e": "பிளாட் எண் 49", "s": "9.00 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "w": "பிளாட் எண் 47"}, "owner": "பரமேஸ்வரன் ச", "first": "19-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/328444482/2026", "date": "19-11-2026", "nature": "கிரையம்", "survey": "163/11A2", "extent": "138.36 ச.மீ (1489.26 ச.அடி / 3.42 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "பரமேஸ்வரன் ச த/பெ சண்முகவேல்", "claimList": [{"name": "பரமேஸ்வரன் ச த/பெ சண்முகவேல்", "place": "மேல அம்பலசேரி, கட்டாரிமங்கலம், சாத்தான்குளம் வட்டம்", "agent": "", "cell": "6379282004"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/328444482/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | பரமேஸ்வரன் ச | சண்முகவேல்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | paramesvaran | parameswaran | sanmukavel | shanmugavel", "price": "3,00,000", "priceNote": "", "mv": "4,30,300"},
+{"n": "49", "title": "MARGOSCHIS NAGAR - PLOT - 49", "survey": "163/11A2, 163/11A3", "patta": "5613, 5614", "extent": "127.61 ச.மீ (1373.53 ச.அடி / 3.15 செண்டு)", "sqm": "127.61", "sqft": "1373.53", "cent": "3.15", "shape": "", "m": {"n": "9.00", "s": "9.80", "e": "13.35", "w": "13.80"}, "b": {"n": "அ.பு.ச. 163/4A-ல் உள்ள நிலம்", "e": "பிளாட் எண் 50", "s": "9.00 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "w": "பிளாட் எண் 48"}, "owner": "சேது மு", "first": "19-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/328419762/2026", "date": "19-11-2026", "nature": "கிரையம்", "survey": "163/11A2, 163/11A3", "extent": "127.61 ச.மீ (1373.53 ச.அடி / 3.15 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "சேது மு க/பெ சேது என்ற அருணாசலம்", "claimList": [{"name": "சேது மு க/பெ சேது என்ற அருணாசலம்", "place": "அம்பலசேரி, கட்டாரிமங்கலம், சாத்தான்குளம் வட்டம்", "agent": "", "cell": "8189845291"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/328419762/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | சேது மு | சேது என்ற அருணாசலம்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | sethu | arunaasalam | arunachalam", "price": "3,00,000", "priceNote": "", "mv": "3,96,900"},
+{"n": "50", "title": "MARGOSCHIS NAGAR - PLOT - 50", "survey": "163/11A3", "patta": "5614", "extent": "123.52 ச.மீ (1329.52 ச.அடி / 3.05 செண்டு) – தென்கிழக்கு மூலை முடக்கு 1.50 மீ x 1.50 மீ நீங்கலாக", "sqm": "123.52", "sqft": "1329.52", "cent": "3.05", "shape": "தென்கிழக்கு மூலை முடக்கு 1.50 மீ x 1.50 மீ நீங்கலாக", "m": {"n": "9.00", "s": "9.80", "e": "12.93", "w": "13.35"}, "b": {"n": "அ.பு.ச. 163/4A-ல் உள்ள நிலம்", "e": "10.00 மீ அகல தென்வடல் மனைப்பிரிவு சாலை", "s": "9.00 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "w": "பிளாட் எண் 49"}, "owner": "ரா. சிவா, அருள்தேவி சி", "first": "19-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/328454282/2026", "date": "19-11-2026", "nature": "கிரையம்", "survey": "163/11A3", "extent": "123.52 ச.மீ (1329.52 ச.அடி / 3.05 செண்டு) – தென்கிழக்கு மூலை முடக்கு 1.50 மீ x 1.50 மீ நீங்கலாக", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "ரா. சிவா த/பெ ராமச்சந்திரன், அருள்தேவி சி த/பெ சித்திரவேல்", "claimList": [{"name": "ரா. சிவா த/பெ ராமச்சந்திரன்", "place": "அகப்பைக்குளம், நாசரேத்", "agent": "", "cell": "9095560601"}, {"name": "அருள்தேவி சி த/பெ சித்திரவேல்", "place": "அகப்பைக்குளம், நாசரேத்", "agent": "", "cell": "9788576217"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/328454282/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | ரா. சிவா | ராமச்சந்திரன் | அருள்தேவி சி | சித்திரவேல்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | raa. sivaa | siva | raamassanthiran | ramachandran | aruldevi | arul devi | aruldhevi | siththiravel | chithiravel", "price": "3,00,000", "priceNote": "", "mv": "3,84,200"},
+{"n": "51", "title": "MARGOSCHIS NAGAR - PLOT - 51", "survey": "163/11A3", "patta": "5614", "extent": "94.88 ச.மீ (1021.26 ச.அடி / 2.34 செண்டு) – தென்மேற்கு மூலை முடக்கு 1.50 மீ x 1.50 மீ நீங்கலாக", "sqm": "94.88", "sqft": "1021.26", "cent": "2.34", "shape": "தென்மேற்கு மூலை முடக்கு 1.50 மீ x 1.50 மீ நீங்கலாக", "m": {"n": "8.65", "s": "7.00", "e": "11.85", "w": "12.40"}, "b": {"n": "அ.பு.ச. 163/4A-ல் உள்ள நிலம்", "e": "பிளாட் எண் 52", "s": "9.00 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "w": "10.00 மீ அகல தென்வடல் மனைப்பிரிவு சாலை"}, "owner": "சிவகுமாரி மு", "first": "10-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/324497483/2026", "date": "10-11-2026", "nature": "கிரையம்", "survey": "163/11A3", "extent": "94.88 ச.மீ (1021.26 ச.அடி / 2.34 செண்டு) – தென்மேற்கு மூலை முடக்கு 1.50 மீ x 1.50 மீ நீங்கலாக", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "சிவகுமாரி மு க/பெ விஜயகுமார் சுரேஷ்", "claimList": [{"name": "சிவகுமாரி மு க/பெ விஜயகுமார் சுரேஷ்", "place": "நாசரேத்", "agent": "", "cell": "9047218017"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/324497483/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | சிவகுமாரி மு | விஜயகுமார் சுரேஷ்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | sivakumaari | sivakumari | vijayakumaar suresh | vijayakumar suresh", "price": "2,40,000", "priceNote": "", "mv": "2,95,100"},
+{"n": "52", "title": "MARGOSCHIS NAGAR - PLOT - 52", "survey": "163/11A3", "patta": "5614", "extent": "73.71 ச.மீ (793.41 ச.அடி / 1.82 செண்டு)", "sqm": "73.71", "sqft": "793.41", "cent": "1.82", "shape": "", "m": {"n": "6.30", "s": "6.30", "e": "11.50", "w": "11.90"}, "b": {"n": "அ.பு.ச. 163/4A-ல் உள்ள நிலம்", "e": "பிளாட் எண் 53", "s": "9.00 மீ அகல கிழமேல் மனைப்பிரிவு சாலை", "w": "பிளாட் எண் 51"}, "owner": "சியாமளா சுஜாதா", "first": "19-11-2026", "tx": [{"doc": "", "year": "2026", "link": "", "tp": "TP/328451482/2026", "date": "19-11-2026", "nature": "கிரையம்", "survey": "163/11A3", "extent": "73.71 ச.மீ (793.41 ச.அடி / 1.82 செண்டு)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "exeList": ["விக்டர்ராஜ் டேனியல் த/பெ ஜான் தாமஸ்", "பியூலா ஏஞ்சலிக்கா க/பெ விக்டர்ராஜ் டேனியல்", "பெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்", "ஜான் மேத்யூ த/பெ விக்டர்ராஜ் டேனியல்", "ஷெரில் சாரா த/பெ விக்டர்ராஜ் டேனியல்"], "exePlace": "ஐவரும்: 2-வது ஐசக் தெரு, நாசரேத்", "claim": "சியாமளா சுஜாதா க/பெ பே. துரைசிங்", "claimList": [{"name": "சியாமளா சுஜாதா க/பெ பே. துரைசிங்", "place": "தென்திருப்பேரை, ஏரல் வட்டம்", "agent": "", "cell": "8056964020"}], "pr": "485/2022, 595/2022, 799/2022, 1072/2022", "bnd": "", "vs": "", "flag": "ok", "rem": "", "ec": "Merged Preview – TP/328451482/2026", "part": ""}], "note": "", "flag": "ok", "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா | சியாமளா சுஜாதா | பே. துரைசிங்", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah | siyaamalaa sujaathaa | shyamala sujatha | syamala | thuraising | duraisingh", "price": "2,00,000", "priceNote": "", "mv": "2,29,300"}
+];
+
+/* மனை எண் இல்லாத பதிவுகள் (kind:'other') + முந்தைய உரிமைத் தொடர் / மூல ஆவணங்கள் (kind:'parent') — ஆவண வாரியாக.
+   மாதிரி:
+   {"doc":"45/2020","kind":"parent","date":"01-Jan-2020","nature":"கிரையம்","flag":"ok","ec":"",
+    "rows":[{"sr":"","survey":"163/6A1","extent":"","exe":"விற்றவர்","claim":"வாங்கியவர்","pr":"-","bnd":"","vs":"","flag":"ok","rem":"","note":""}],
+    "all_names":"விற்றவர் | வாங்கியவர்","eng":"virravar | vaangiyavar"}
+*/
+var OTHERS = [
+{"doc": "485/2022", "kind": "parent", "date": "31-Mar-2022", "nature": "கிரையம்", "flag": "warn", "ec": "நாசரேத் SRO, புத்தகம் 1", "rows": [{"sr": "", "survey": "மனைப்பிரிவின் 14 சர்வே எண்கள் (எந்த ஆவணம் எந்த சர்வே எண்ணுக்கு என்பது கிரைய ஆவணங்களில் தனியாக இல்லை): 163/11A1, 163/11A2, 163/11A3, 163/11A4, 163/6A1A, 163/6A1B, 163/6A1C, 163/6A1D, 163/6A1E, 163/6A1F, 163/6A1G, 163/6A1H, 163/6A1I, 163/6A1J", "extent": "இந்த ஆவணத்திற்குரிய தனி விஸ்தீரணம் குறிப்பிடப்படவில்லை (மனைப்பிரிவு மொத்தம் 9380.00 ச.மீ / 2.31 ஏக்கர்)", "exe": "(கிரைய ஆவணங்களில் குறிப்பிடப்படவில்லை)", "claim": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "pr": "-", "bnd": "", "vs": "கிரைய ஆவணங்களின் (Merged Preview) விவரிப்புப்படி – மூல ஆவணம் பார்க்கப்படவில்லை", "flag": "warn", "rem": "தற்போதைய விற்பனையாளர்கள் ஐந்து பேரும் வாங்கிய மூல கிரைய ஆவணம்.", "note": ""}], "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah"},
+{"doc": "595/2022", "kind": "parent", "date": "22-Apr-2022", "nature": "கிரையம்", "flag": "warn", "ec": "நாசரேத் SRO, புத்தகம் 1", "rows": [{"sr": "", "survey": "மனைப்பிரிவின் 14 சர்வே எண்கள் (எந்த ஆவணம் எந்த சர்வே எண்ணுக்கு என்பது கிரைய ஆவணங்களில் தனியாக இல்லை): 163/11A1, 163/11A2, 163/11A3, 163/11A4, 163/6A1A, 163/6A1B, 163/6A1C, 163/6A1D, 163/6A1E, 163/6A1F, 163/6A1G, 163/6A1H, 163/6A1I, 163/6A1J", "extent": "இந்த ஆவணத்திற்குரிய தனி விஸ்தீரணம் குறிப்பிடப்படவில்லை (மனைப்பிரிவு மொத்தம் 9380.00 ச.மீ / 2.31 ஏக்கர்)", "exe": "(கிரைய ஆவணங்களில் குறிப்பிடப்படவில்லை)", "claim": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "pr": "-", "bnd": "", "vs": "கிரைய ஆவணங்களின் (Merged Preview) விவரிப்புப்படி – மூல ஆவணம் பார்க்கப்படவில்லை", "flag": "warn", "rem": "தற்போதைய விற்பனையாளர்கள் ஐந்து பேரும் வாங்கிய மூல கிரைய ஆவணம்.", "note": ""}], "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah"},
+{"doc": "799/2022", "kind": "parent", "date": "20-May-2022", "nature": "கிரையம்", "flag": "warn", "ec": "நாசரேத் SRO, புத்தகம் 1", "rows": [{"sr": "", "survey": "மனைப்பிரிவின் 14 சர்வே எண்கள் (எந்த ஆவணம் எந்த சர்வே எண்ணுக்கு என்பது கிரைய ஆவணங்களில் தனியாக இல்லை): 163/11A1, 163/11A2, 163/11A3, 163/11A4, 163/6A1A, 163/6A1B, 163/6A1C, 163/6A1D, 163/6A1E, 163/6A1F, 163/6A1G, 163/6A1H, 163/6A1I, 163/6A1J", "extent": "இந்த ஆவணத்திற்குரிய தனி விஸ்தீரணம் குறிப்பிடப்படவில்லை (மனைப்பிரிவு மொத்தம் 9380.00 ச.மீ / 2.31 ஏக்கர்)", "exe": "(கிரைய ஆவணங்களில் குறிப்பிடப்படவில்லை)", "claim": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "pr": "-", "bnd": "", "vs": "கிரைய ஆவணங்களின் (Merged Preview) விவரிப்புப்படி – மூல ஆவணம் பார்க்கப்படவில்லை", "flag": "warn", "rem": "தற்போதைய விற்பனையாளர்கள் ஐந்து பேரும் வாங்கிய மூல கிரைய ஆவணம். பதிவு தேதி: பத்து கிரைய ஆவணங்களில் 20-05-2022, இரண்டில் (பிளாட் 41, 42) 25-05-2022.", "note": ""}], "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah"},
+{"doc": "1072/2022", "kind": "parent", "date": "04-Jul-2022", "nature": "பாகப்பிரிவினை", "flag": "warn", "ec": "நாசரேத் SRO, புத்தகம் 1", "rows": [{"sr": "", "survey": "163/11A1, 163/11A2, 163/11A3, 163/11A4, 163/6A1A, 163/6A1B, 163/6A1C, 163/6A1D, 163/6A1E, 163/6A1F, 163/6A1G, 163/6A1H, 163/6A1I, 163/6A1J", "extent": "மொத்தம் 9380.00 ச.மீ (2.31 ஏக்கர்) – பட்டா எண்கள் 5613, 5614, 5615, 5616, 5617, 5139, 5242", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "claim": "எ.கொ. நபர்கள் (ஐந்து பேரும்)", "pr": "-", "bnd": "", "vs": "கிரைய ஆவணங்களின் (Merged Preview) விவரிப்புப்படி – மூல ஆவணம் பார்க்கப்படவில்லை", "flag": "warn", "rem": "23-06-2022-ல் எழுதி 04-07-2022-ல் பதிவான பாகப்பிரிவினை ஆவணம்.", "note": ""}], "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah"},
+{"doc": "1382/2026", "kind": "other", "date": "24-Aug-2026", "nature": "தான ஆவணம் (Gift Deed)", "flag": "ok", "ec": "நாசரேத் SRO, புத்தகம் 1", "rows": [{"sr": "", "survey": "163/11A1, 163/11A2, 163/11A3, 163/11A4, 163/6A1A, 163/6A1B, 163/6A1C, 163/6A1D, 163/6A1E, 163/6A1F, 163/6A1G, 163/6A1H, 163/6A1I, 163/6A1J", "extent": "மனைப்பிரிவு சாலைகள் + உள்ளாட்சி ஒதுக்கீடு பகுதி (PP-1)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "claim": "நாசரேத் பேரூராட்சி", "pr": "-", "bnd": "", "vs": "கிரைய ஆவணங்களின் (Merged Preview) விவரிப்புப்படி – மூல ஆவணம் பார்க்கப்படவில்லை", "flag": "ok", "rem": "DTCP தொழில்நுட்ப ஒப்புதல்: Layout No. 193/2026 (ந.க.எண் GZRVLI2Y/THOOTHUKUDI/2026/TCP, நாள் 28.08.2026) – 55 மனைகள். பேரூராட்சி மன்றத் தீர்மானம் எண் 706, நாள் 15.10.2026; செயல் அலுவலர் இறுதி ஒப்புதல் ந.க.எண் 129/2026, நாள் 27.10.2026.", "note": ""}], "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah"},
+{"doc": "1383/2026", "kind": "other", "date": "தேதி பின்னர் சேர்க்கவும்", "nature": "மின்வாரிய (EB) ஒதுக்கீடு பகுதி (PP-2) ஆவணம்", "flag": "ok", "ec": "நாசரேத் SRO, புத்தகம் 1", "rows": [{"sr": "", "survey": "மனைப்பிரிவின் மின்வாரிய ஒதுக்கீடு பகுதி (PP-2)", "extent": "மின்வாரிய ஒதுக்கீடு பகுதி (PP-2)", "exe": "விக்டர்ராஜ் டேனியல், பியூலா ஏஞ்சலிக்கா, பெரில் சாரா, ஜான் மேத்யூ, ஷெரில் சாரா", "claim": "மின்வாரியம் (EB)", "pr": "-", "bnd": "", "vs": "", "flag": "ok", "rem": "ஆவண விபரம் (தேதி, தன்மை, விஸ்தீரணம்) இன்னும் சேர்க்கப்படவில்லை – மேலே உள்ள Download மூலம் ஆவணத்தைப் பார்க்கவும்.", "note": ""}], "all_names": "விக்டர்ராஜ் டேனியல் | பியூலா ஏஞ்சலிக்கா | பெரில் சாரா | ஜான் மேத்யூ | ஷெரில் சாரா", "eng": "viktarraaj teniyal | victorraj daniel | piyoolaa enjalikkaa | beulah angelica | peril saaraa | beryl sarah | jaan methyoo | john mathew | sheril saaraa | sheryl sarah"}
+];
+
+/* Direct-download links (results panel ⬇ buttons) — Doc.No : Drive download URL
+   எ.கா: "123/2026": "https://drive.google.com/uc?export=download&id=XXXX" */
+window.DOC_DL = {
+  "485/2022": "https://drive.google.com/file/d/1tBanUKWDFxOiGU3Pb-pVkcuPKg5ES8pi/view",
+  "595/2022": "https://drive.google.com/file/d/1KyCos-81d1LDWZ0UuKGE8kWIkoUvUkb7/view",
+  "799/2022": "https://drive.google.com/file/d/1phl_DRCbQjRcqE-ynP35PkFTdVs5UYQb/view",
+  "1072/2022": "https://drive.google.com/file/d/1tPpJGYamzfp4epyN8h_1wAmqFac7b4TK/view",
+  "1382/2026": "https://drive.google.com/file/d/1by62KgTPyg4azE3pn3CTCvV6LuT3sXZd/view",
+  "1383/2026": "https://drive.google.com/file/d/1LsoGWUh7WUVucIEUlPZdXELQwaz09xuj/view"
+};
+
+var MAX_PLOT = 55;
+
+/* ================= HELPERS ================= */
+function escHtml(s){ return String(s==null?'':s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+function getPlot(n){ for(var i=0;i<PLOTS.length;i++){ if(String(PLOTS[i].n)===String(n)) return PLOTS[i]; } return null; }
+function getOther(doc){ for(var i=0;i<OTHERS.length;i++){ if(OTHERS[i].doc===doc) return OTHERS[i]; } return null; }
+function plotDocs(p){ return (p.tx||[]).map(function(t){return t.doc;}).filter(Boolean); }
+/* Doc.No தேடலுக்கு: பதிவு எண் + (பதிவு நிலுவையில் உள்ளவற்றுக்கு) தற்காலிக TP எண் */
+function plotDocKeys(p){ var a=plotDocs(p); (p.tx||[]).forEach(function(t){ if(t.tp) a.push(t.tp); }); return a; }
+/* பதிவு எண் இன்னும் இல்லை எனில்  ____/2026  என காலியாகக் காட்டு */
+function docLabelHtml(t){ return t.doc ? escHtml(t.doc) : '<span class="doc-blank">&nbsp;</span>/'+escHtml(t.year||''); }
+function docLabelText(t){ return t.doc ? t.doc : '        /'+(t.year||'')+' (பதிவு நிலுவையில்)'; }
+function splitSurveys(str,out){ (String(str||'').match(/\d+(?:\/[0-9A-Za-z]+)?/g)||[]).forEach(function(x){ if(out.indexOf(x)<0) out.push(x); }); }
+function plotSurveys(p){ var s=[]; (p.tx||[]).forEach(function(t){ splitSurveys(t.survey,s); }); return s; }
+function lastTx(p){ return (p.tx&&p.tx.length)?p.tx[p.tx.length-1]:null; }
+function isSale(t){ return /கிரையம்/.test(t.nature); }
+function saleCount(p){ return (p.tx||[]).filter(isSale).length; }
+var FLAG_TXT={warn:'⚠ Verification Required', bad:'⛔ Double Entry – இருமுறை விற்பனை'};
+
+window.dlButtonsHtml = function(p){
+  var items = plotDocs(p).filter(function(k){ return window.DOC_DL[k]; });
+  (p.tx||[]).forEach(function(t){ if(t.link && items.indexOf(t.doc)<0) items.push(t.doc); });
+  if(!items.length) return '';
+  return '<div class="result-dls">'+items.map(function(k){
+    var url=window.DOC_DL[k]; if(!url){ var t=p.tx.filter(function(x){return x.doc===k;})[0]; url=t&&t.link; }
+    return '<a class="result-dl" href="'+url+'" target="_blank" onclick="event.stopPropagation()">\u2b07 '+k+'</a>';
+  }).join('')+'</div>';
+};
+
+/* ================= TOOLTIP ================= */
+var NBSP6='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+var ORD=['முதல் கிரையம் / 1st Sale','2-ஆம் கிரையம் / 2nd Sale','3-ஆம் கிரையம் / 3rd Sale','4-ஆம் கிரையம் / 4th Sale','5-ஆம் கிரையம் / 5th Sale','6-ஆம் கிரையம் / 6th Sale'];
+function moreHtml(t){
+  var m='';
+  if(t.bndv) m+='<p><b>எல்லை சரிபார்ப்பு :</b></p><ul>'+t.bndv.split(/\s*\|\|\s*|\s+\|\s+/).map(function(x){return '<li>'+escHtml(x)+'</li>';}).join('')+'</ul>';
+  if(t.rem)  m+='<p><b>குறிப்பு :</b> '+escHtml(t.rem)+'</p>';
+  if(t.ec)   m+='<p><b>ஆதாரம் :</b> '+escHtml(t.ec)+'</p>';
+  if(!m) return '';
+  return '<details class="tip-more"'+(t.flag==='bad'?' open':'')+'><summary>சரிபார்ப்பு விவரம் / குறிப்பு</summary>'+m+'</details>';
+}
+function buildTipHtmlOld(p){
+  var h='<div class="tip-owner'+(p.flag==='bad'?' bad':'')+'">Present Owner : <b>'+escHtml(p.owner)+'</b></div>';
+  var saleIdx=0;
+  (p.tx||[]).forEach(function(t,i){
+    var sale=isSale(t);
+    var head=sale?(ORD[saleIdx]||((saleIdx+1)+'-ஆம் கிரையம்')):t.nature;
+    if(sale && saleIdx>0 && /இருமுறை விற்பனை/.test(t.vs)) head='அதே மனை மீண்டும் கிரையம் / Double Sale';
+    if(sale) saleIdx++;
+    h+='<div class="tip-tx">';
+    h+='<b><u class="tip-tx-head">'+escHtml(head)+'</u></b>';
+    if(t.part) h+=' <span class="tip-tx-nature">('+escHtml(t.part)+')</span>';
+    h+='<br>Doc.No'+NBSP6+'&nbsp;&nbsp;: <b>'+escHtml(t.doc)+'</b> &nbsp;<span class="tip-tx-nature">('+escHtml(t.date)+')</span><br>';
+    h+='Executant'+NBSP6+': <b>'+escHtml(t.exe)+'</b><br>';
+    h+='Claimant'+NBSP6+'&nbsp;: <b>'+escHtml(t.claim)+'</b><br>';
+    h+='PR Ref.Doc.No&nbsp;: '+escHtml(t.pr);
+    if(t.survey && t.survey!==p.survey) h+='<br><span class="tip-tx-nature">Survey (ஆவணப்படி): '+escHtml(t.survey)+'</span>';
+    if(t.extent && t.extent!==p.extent) h+='<br><span class="tip-tx-nature">Extent (ஆவணப்படி): '+escHtml(t.extent)+'</span>';
+    if(t.bnd) h+='<br><span class="tip-bnd"><b>எல்லை / Boundary</b> : '+escHtml(t.bnd)+'</span>';
+    h+='<br><span class="tip-flag '+t.flag+'">'+escHtml(t.vs)+'</span>';
+    var url=t.link||window.DOC_DL[t.doc];
+    if(url) h+='<br><a href="'+url+'" target="_blank" class="tipdl" onclick="event.stopPropagation()">⬇ Download Document '+escHtml(t.doc)+'</a>';
+    h+=moreHtml(t);
+    h+='</div>';
+    if(i<p.tx.length-1) h+='<hr>';
+  });
+  h+='<hr>';
+  h+='<b>சர்வே எண் / Survey No</b>&nbsp;: <b>'+escHtml(p.survey)+'</b><br>';
+  h+='<b>விஸ்தீரணம் / Extent</b>&nbsp;&nbsp;&nbsp;: <b>'+escHtml(p.extent)+'</b>';
+  if(p.note) h+='<div class="tip-note'+(p.flag==='bad'?' bad':'')+'">⚠ '+escHtml(p.note)+'</div>';
+  return h;
+}
+/* ── பிளாட்டின் வரைபடம் (area coords-ல் இருந்து) + நான்கு பக்க அளவுகள் ── */
+function plotSketchSvg(p){
+  var a=findArea(p.n), c=a?areaCoords(a):null; if(!c) return '';
+  var xs=[], ys=[], i;
+  for(i=0;i<c.length-1;i+=2){ xs.push(c[i]); ys.push(c[i+1]); }
+  var x1=Math.min.apply(null,xs), x2=Math.max.apply(null,xs), y1=Math.min.apply(null,ys), y2=Math.max.apply(null,ys);
+  var W=330, H=250, padX=58, padT=46, padB=46;
+  var k=Math.min((W-2*padX)/((x2-x1)||1), (H-padT-padB)/((y2-y1)||1));
+  var ox=(W-(x2-x1)*k)/2, oy=padT+((H-padT-padB)-(y2-y1)*k)/2, pts=[];
+  for(i=0;i<xs.length;i++) pts.push(((xs[i]-x1)*k+ox).toFixed(1)+','+((ys[i]-y1)*k+oy).toFixed(1));
+  var L=ox, R=ox+(x2-x1)*k, T=oy, B=oy+(y2-y1)*k, cx=(L+R)/2, cy=(T+B)/2, m=p.m||{};
+  var s='<svg class="tip-sketch" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plot '+escHtml(p.n)+' வரைபடம்">';
+  s+='<polygon points="'+pts.join(' ')+'"></polygon>';
+  s+='<text class="pno" x="'+cx+'" y="'+(cy-2)+'" text-anchor="middle">Plot '+escHtml(p.n)+'</text>';
+  if(p.sqm) s+='<text x="'+cx+'" y="'+(cy+15)+'" text-anchor="middle">'+escHtml(p.sqm)+' ச.மீ</text>';
+  if(m.n) s+='<text class="dir" x="'+cx+'" y="'+(T-23)+'" text-anchor="middle">வடக்கு</text><text class="dim" x="'+cx+'" y="'+(T-8)+'" text-anchor="middle">'+escHtml(m.n)+' மீ</text>';
+  if(m.s) s+='<text class="dim" x="'+cx+'" y="'+(B+17)+'" text-anchor="middle">'+escHtml(m.s)+' மீ</text><text class="dir" x="'+cx+'" y="'+(B+31)+'" text-anchor="middle">தெற்கு</text>';
+  if(m.w) s+='<text class="dim" transform="translate('+(L-9)+','+cy+') rotate(-90)" text-anchor="middle">'+escHtml(m.w)+' மீ</text><text class="dir" transform="translate('+(L-25)+','+cy+') rotate(-90)" text-anchor="middle">மேற்கு</text>';
+  if(m.e) s+='<text class="dim" transform="translate('+(R+9)+','+cy+') rotate(90)" text-anchor="middle">'+escHtml(m.e)+' மீ</text><text class="dir" transform="translate('+(R+25)+','+cy+') rotate(90)" text-anchor="middle">கிழக்கு</text>';
+  s+='<g transform="translate('+(W-22)+',34)"><path d="M0,10 L0,-12 M-5,-5 L0,-13 L5,-5" fill="none" stroke="#8faabf" stroke-width="1.6"/><text class="dir" x="0" y="23" text-anchor="middle">வ</text></g>';
+  return s+'</svg>';
+}
+function peopleHtml(list, withCell){
+  return '<ol class="tip-people">'+(list||[]).map(function(x){
+    if(typeof x==='string') return '<li><b>'+escHtml(x)+'</b></li>';
+    return '<li><b>'+escHtml(x.name)+'</b>'+(x.place?' <span class="tip-place">— '+escHtml(x.place)+'</span>':'')+(x.agent?'<br><span class="tip-place">'+escHtml(x.agent)+'</span>':'')+(withCell?'<br><span class="tip-cell">Cell No : <b>'+(x.cell?escHtml(x.cell):'----------')+'</b></span>':'')+'</li>';
+  }).join('')+'</ol>';
+}
+/* புதிய வடிவம்: Doc.No → எழுதிக் கொடுப்பவர் → எழுதி வாங்குபவர் → சொத்து விபரக்குறிப்பு (வரைபடம், அளவுகள், நான்கு எல்கைகள்) */
+function buildTipHtml(p){
+  if(!p.b && !p.m) return buildTipHtmlOld(p);
+  var h='', tx=p.tx||[];
+  tx.forEach(function(t,i){
+    if(i>0) h+='<hr>';
+    h+='<div class="tip-tx">';
+    h+=t.doc ? '<span class="tip-flag ok">பதிவு செய்யப்பட்டது</span>' : '<span class="tip-flag warn">பதிவு நிலுவையில் (Pending)</span>';
+    h+='<div class="tip-docline">Doc.No. : <b>'+docLabelHtml(t)+'</b>'+(t.date?' &nbsp;<span class="tip-tx-nature">('+escHtml(t.nature||'')+' — ஆவண தேதி '+escHtml(t.date)+')</span>':'')+'</div>';
+    var url=t.link||(t.doc&&window.DOC_DL[t.doc]);
+    if(url) h+='<a href="'+url+'" target="_blank" class="tipdl" onclick="event.stopPropagation()">⬇ Download Document '+escHtml(t.doc||'')+'</a>';
+    h+='<div class="tip-sec">எழுதிக் கொடுப்பவர்</div>'+peopleHtml(t.exeList||[t.exe]);
+    if(t.exePlace) h+='<div class="tip-place" style="margin-left:22px">'+escHtml(t.exePlace)+'</div>';
+    h+='<div class="tip-sec">எழுதி வாங்குபவர்</div>'+peopleHtml(t.claimList||[{name:t.claim}], true);
+    if(t.pr) h+='<div class="tip-kv">PR Ref.Doc.No : '+escHtml(t.pr)+'</div>';
+    h+='</div>';
+  });
+  /* சொத்து விபரம்: தொட்டால் மட்டும் திறக்கும் (வரைபடம், அளவுகள், நான்கு எல்கைகள், விஸ்தீரணம், கிரையம், மதிப்பு) */
+  var b=p.b||{}, m=p.m||{};
+  h+='<details class="tip-prop"><summary>சொத்து விபரம்</summary>';
+  h+=plotSketchSvg(p);
+  h+='<table class="tip-bnd-tbl">'+[['வடக்கு','n'],['கிழக்கு','e'],['தெற்கு','s'],['மேற்கு','w']].map(function(d){
+    return '<tr><td>'+d[0]+'</td><td>'+(m[d[1]]?escHtml(m[d[1]])+' மீ':'')+'</td><td>'+escHtml(b[d[1]]||'')+'</td></tr>';
+  }).join('')+'</table>';
+  h+='<div class="tip-kv"><b>விஸ்தீரணம்</b> : <b>'+escHtml(p.sqm||'')+' ச.மீ</b>'+(p.sqft?' ('+escHtml(p.sqft)+' ச.அடி'+(p.cent?' / '+escHtml(p.cent)+' செண்டு':'')+')':'');
+  if(p.shape) h+='<br><span class="tip-tx-nature">'+escHtml(p.shape)+'</span>';
+  h+='<br><b>சர்வே எண்</b> : <b>'+escHtml(p.survey)+'</b>';
+  if(p.patta) h+='<br><b>பட்டா எண்</b> : '+escHtml(p.patta);
+  h+='<br><b>சொத்தின் கிரையம்</b> : <b>ரூ. '+(p.price?escHtml(p.price):'_______')+'/-</b>'+(p.priceNote?' <span class="tip-tx-nature">('+escHtml(p.priceNote)+')</span>':'');
+  h+='<br><b>மதிப்பு</b> : <b>ரூ. '+(p.mv?escHtml(p.mv):'_______')+'/-</b>';
+  h+='</div></details>';
+  if(p.note) h+='<div class="tip-note'+(p.flag==='bad'?' bad':'')+'">⚠ '+escHtml(p.note)+'</div>';
+  return h;
+}
+function buildOtherHtml(o){
+  var r0=o.rows[0];
+  var same=o.rows.every(function(r){ return r.exe===r0.exe && r.claim===r0.claim && r.pr===r0.pr; });
+  var h='<div class="tip-tx"><b><u class="tip-tx-head">'+escHtml(o.nature)+'</u></b>';
+  h+='<br>Doc.No'+NBSP6+'&nbsp;&nbsp;: <b>'+escHtml(o.doc)+'</b> &nbsp;<span class="tip-tx-nature">('+escHtml(o.date)+') — '+escHtml(o.ec)+'</span>';
+  if(same){
+    h+='<br>Executant'+NBSP6+': <b>'+escHtml(r0.exe)+'</b><br>Claimant'+NBSP6+'&nbsp;: <b>'+escHtml(r0.claim)+'</b><br>PR Ref.Doc.No&nbsp;: '+escHtml(r0.pr);
+  }
+  var url=window.DOC_DL[o.doc];
+  if(url) h+='<br><a href="'+url+'" target="_blank" class="tipdl" onclick="event.stopPropagation()">⬇ Download Document '+escHtml(o.doc)+'</a>';
+  h+='</div>';
+  o.rows.forEach(function(r){
+    h+='<hr><div class="tip-tx">';
+    h+='<span class="tip-tx-nature">'+escHtml(r.sr)+'</span><br>';
+    if(!same) h+='Executant'+NBSP6+': <b>'+escHtml(r.exe)+'</b><br>Claimant'+NBSP6+'&nbsp;: <b>'+escHtml(r.claim)+'</b><br>PR Ref.Doc.No&nbsp;: '+escHtml(r.pr)+'<br>';
+    h+='<b>Survey No</b> : '+escHtml(r.survey)+'<br><b>Extent</b> : '+escHtml(r.extent);
+    if(r.bnd) h+='<br><span class="tip-bnd"><b>எல்லை / Boundary</b> : '+escHtml(r.bnd)+'</span>';
+    if(r.vs) h+='<br><span class="tip-flag '+r.flag+'">'+escHtml(r.vs)+'</span>';
+    if(r.rem) h+='<details class="tip-more"'+(r.flag==='bad'?' open':'')+'><summary>குறிப்பு</summary><p>'+escHtml(r.rem)+'</p></details>';
+    if(r.note) h+='<div class="tip-note">⚠ '+escHtml(r.note)+'</div>';
+    h+='</div>';
+  });
+  return h;
+}
+
+/* visualViewport = பயனர் pinch-zoom செய்த பிறகு உண்மையில் தெரியும் screen பகுதி. */
+function _vv(){
+  var v=window.visualViewport;
+  if(v) return { x:v.offsetLeft, y:v.offsetTop, w:v.width, h:v.height, sc:(v.scale||1) };
+  return { x:0, y:0, w:window.innerWidth, h:window.innerHeight, sc:1 };
+}
+
+function positionTip(clientX, clientY){
+  var box=document.getElementById('tipBox');
+  if(!box.classList.contains('open')) return;
+  var vv=_vv();
+  var s=vv.sc>0?vv.sc:1;
+  var bwMax=Math.min(620, window.innerWidth-20);
+  var sheet=(s>1.05 || vv.w*s<=600);   /* கைபேசி: tooltip திரையின் முழு அகலத்தில், கீழ்ப் பாதிக்குள் மட்டும் — உள்ளே scroll செய்து பார்க்கலாம்; மேல் பாதியில் வரைபடம் தெரியும் */
+  box.classList.toggle('sheet', sheet);
+  box.style.width=sheet ? Math.round(vv.w*s)+'px' : 'max-content';
+  box.style.maxWidth=sheet ? Math.round(vv.w*s)+'px' : bwMax+'px';
+  box.style.right='auto'; box.style.bottom='auto';
+  box.style.transformOrigin='0 0';
+  box.style.transform=(s>1.02)?('scale('+(1/s)+')'):'none';
+
+  var maxH=sheet ? Math.max(170, Math.floor(vv.h*s*0.5)) : Math.max(160, Math.min(window.innerHeight-20, vv.h*s-16));
+  box.style.maxHeight=maxH+'px';
+  var body=document.getElementById('tipBody');
+  body.style.maxHeight=Math.max(90, maxH-52)+'px';
+
+  var bw=box.offsetWidth;
+  var bh=box.offsetHeight;
+  var effW=bw/s, effH=bh/s, pad=8/s;
+
+  var x, y;
+  if(sheet){
+    x=vv.x;
+    y=vv.y+vv.h-effH;
+  } else if(clientX==null && clientY==null){
+    var anchorBottom=0;
+    var rp=document.getElementById('resultsPanel');
+    var ss=document.getElementById('searchSection');
+    if(rp && rp.classList.contains('open')){
+      var rr=rp.getBoundingClientRect();
+      if(rr.bottom>0 && rr.top<vv.y+vv.h) anchorBottom=rr.bottom;
+    }
+    if(!anchorBottom && ss) anchorBottom=ss.getBoundingClientRect().bottom;
+    x=vv.x+pad;
+    y=Math.max(vv.y+pad, anchorBottom+8);
+  } else {
+    x=clientX-effW/2;
+    y=clientY+16;
+    if(y+effH>vv.y+vv.h-pad) y=clientY-effH-16;
+  }
+  if(!sheet){
+    x=Math.max(vv.x+pad, Math.min(x, vv.x+vv.w-effW-pad));
+    y=Math.max(vv.y+pad, Math.min(y, vv.y+vv.h-effH-pad));
+  }
+  box.style.left=Math.round(x)+'px';
+  box.style.top=Math.round(y)+'px';
+}
+
+/* கைபேசியில்: தேர்ந்தெடுத்த பிளாட் tooltip-க்கு மேலே உள்ள பகுதியின் நடுவில் தெரியும்படி வரைபடத்தை (தேவையெனில் பக்கத்தையும்) நகர்த்து */
+function revealPlotAboveTip(plotNum){
+  var vv=_vv(); if(!(vv.sc>1.05 || vv.w*vv.sc<=600)) return;
+  var box=document.getElementById('tipBox'); if(!box.classList.contains('open')) return;
+  var a=findArea(plotNum), c=a?areaCoords(a):null; if(!c) return;
+  var wrapper=document.getElementById('wrapper'), img=document.getElementById('plotImg');
+  var ir=img.getBoundingClientRect(), wr=wrapper.getBoundingClientRect(), r=img.offsetWidth/COORD_W, sx=0, sy=0, i;
+  for(i=0;i<c.length-1;i+=2){ sx+=c[i]; sy+=c[i+1]; }
+  var cx=ir.left+(sx/(c.length/2))*r, cy=ir.top+(sy/(c.length/2))*r;
+  var ss=document.getElementById('searchSection'), topLimit=Math.max(wr.top, ss?ss.getBoundingClientRect().bottom:0, 0);
+  var bottomLimit=Math.min(box.getBoundingClientRect().top, wr.bottom);
+  if(bottomLimit-topLimit<60){   /* வரைபடப் பெட்டி tooltip-க்கு கீழே மறைந்திருந்தால் பக்கத்தை மேலே நகர்த்து */
+    window.scrollBy(0, wr.top-(ss?ss.getBoundingClientRect().bottom:0)-6);
+    wr=wrapper.getBoundingClientRect(); ir=img.getBoundingClientRect(); cy=ir.top+(sy/(c.length/2))*r;
+    topLimit=Math.max(wr.top, ss?ss.getBoundingClientRect().bottom:0, 0); bottomLimit=Math.min(box.getBoundingClientRect().top, wr.bottom);
+  }
+  var wantY=(topLimit+bottomLimit)/2, wantX=wr.left+wr.width/2;
+  /* கீழ் வரிசை பிளாட்டுகளையும் tooltip-க்கு மேலே கொண்டு வர, வரைபடத்தின் கீழே தற்காலிக இடைவெளி (tooltip மூடும்போது நீக்கப்படும்) */
+  document.getElementById('inner').style.paddingBottom=Math.ceil(wr.bottom-bottomLimit+(bottomLimit-topLimit)/2)+'px';
+  var before=wrapper.scrollTop;
+  wrapper.scrollTop+=cy-wantY; wrapper.scrollLeft+=cx-wantX;
+  var rest=(cy-wantY)-(wrapper.scrollTop-before);
+  if(rest>8) window.scrollBy(0, rest);
+}
+var _lastTipXY={x:null,y:null};
+function openTip(title, bodyHtml, clientX, clientY){
+  var box=document.getElementById('tipBox');
+  document.getElementById('tipTitle').textContent=title;
+  var body=document.getElementById('tipBody');
+  body.innerHTML=bodyHtml; body.scrollTop=0;
+  box.classList.add('open');
+  _lastTipXY={x:clientX,y:clientY};
+  positionTip(clientX, clientY);
+  setTimeout(function(){ positionTip(_lastTipXY.x,_lastTipXY.y); },50);
+}
+function showTip(plotNum, clientX, clientY){
+  var p=getPlot(plotNum);
+  if(!p){
+    openTip("MARGOSCHIS NAGAR - PLOT - "+plotNum,
+      '<div class="tip-owner bad" style="background:rgba(148,163,184,0.12);border-color:rgba(148,163,184,0.45)"><b style="color:#e2e8f0">விற்பனை விபரம் இன்னும் பதிவு செய்யப்படவில்லை</b></div>'+
+      'பிளாட் <b>'+escHtml(plotNum)+'</b>-க்கான விற்பனை / ஆவண விபரங்கள் பின்னர் சேர்க்கப்படும்.',
+      clientX, clientY);
+    return;
+  }
+  openTip(p.title+(p.flag!=='ok'?'  '+(p.flag==='bad'?'⛔':'⚠'):''), buildTipHtml(p), clientX, clientY);
+}
+window.showOther=function(doc, clientX, clientY){
+  var o=getOther(doc); if(!o) return;
+  document.querySelectorAll('.result-item').forEach(function(el){ el.classList.toggle('selected-result', el.getAttribute('data-doc')===doc); });
+  clearHighlight();
+  openTip((o.kind==='parent'?'முந்தைய உரிமைத் தொடர் — ':'மனை எண் இல்லாத பதிவு — ')+o.doc, buildOtherHtml(o), clientX, clientY);
+};
+if(window.visualViewport){
+  window.visualViewport.addEventListener('resize', function(){ positionTip(_lastTipXY.x,_lastTipXY.y); });
+  window.visualViewport.addEventListener('scroll', function(){ positionTip(_lastTipXY.x,_lastTipXY.y); });
+}
+window.addEventListener('scroll', function(){
+  if(_lastTipXY.x==null && _lastTipXY.y==null) positionTip(null,null);
+}, {passive:true});
+/* "சொத்து விபரம்" திறக்கும்/மூடும் போது tooltip திரைக்குள் இருக்கும்படி மீண்டும் இடம் அமை */
+document.getElementById('tipBody').addEventListener('toggle', function(){ positionTip(_lastTipXY.x,_lastTipXY.y); }, true);
+window.hideTip=function(){ document.getElementById('tipBox').classList.remove('open'); clearHighlight(); document.getElementById('inner').style.paddingBottom=''; };
+
+document.addEventListener('click', function(e){
+  var box=document.getElementById('tipBox');
+  if(!box.classList.contains('open')) return;
+  if(box.contains(e.target)) return;
+  if(e.target.tagName==='AREA') return;
+  if(e.target.closest && (e.target.closest('.result-item') || e.target.closest('.docs-menu-item'))) return;
+  hideTip();
+});
+
+/* ================= MAP : zoom + coords ================= */
+var origW=0, origH=0, zoomSc=1;
+var COORD_W=7016, COORD_H=4958;   /* area coords எந்தப் படத்தின் pixel அளவில் உள்ளன (7016 x 4958) */
+
+function areaCoords(a){
+  var s=(a.getAttribute('data-coords')||'').trim();
+  if(!s) return null;
+  var c=s.split(',').map(Number).filter(function(v){return !isNaN(v);});
+  return c.length>=6?c:null;
+}
+
+/* Dreamweaver-ல் இருந்து நேரடியாக ஒட்டப்பட்ட <area coords="..." href="12" /> வரிகளை இந்த file-ன் வடிவத்திற்கு மாற்று */
+function normalizeAreas(){
+  document.querySelectorAll('#Map area').forEach(function(a){
+    if(!a.getAttribute('data-plot')){
+      var h=(a.getAttribute('href')||'').replace(/^#?plot-?/,''), ns=[];
+      var rg=h.match(/^(\d+)-(\d+)$/);
+      if(rg){ for(var k=+rg[1];k<=+rg[2];k++) ns.push(String(k)); }
+      else { var m=h.match(/\d+/); if(m) ns.push(String(+m[0])); }
+      if(ns.length) a.setAttribute('data-plot', ns.join(' '));
+    }
+    var dc=(a.getAttribute('data-coords')||'').trim(), c=(a.getAttribute('coords')||'').trim();
+    if(!dc && c) a.setAttribute('data-coords', c);
+    a.setAttribute('href','javascript:void(0)');
+    if(!a.getAttribute('alt')) a.setAttribute('alt','Plot '+(a.getAttribute('data-plot')||''));
+  });
+}
+
+function rescaleCoords(){
+  var img=document.getElementById('plotImg');
+  if(!origW || !img.offsetWidth) return;
+  var ratio=img.offsetWidth/COORD_W;
+  document.querySelectorAll('#Map area').forEach(function(a){
+    var oc=areaCoords(a); if(!oc) return;
+    a.setAttribute('coords', oc.map(function(v){ return Math.round(v*ratio); }).join(','));
+  });
+  sizeOverlay();
+}
+
+/* வரைபடப் பெட்டியின் உயரம் = படத்தின் உயரம் (அதிகபட்சம் திரையின் 80%) — படத்திற்கு கீழே வெற்றுப் பட்டை வராது */
+function fitWrapperHeight(){
+  var wrapper=document.getElementById('wrapper'), img=document.getElementById('plotImg');
+  var h=img.getBoundingClientRect().height; if(!h) return;
+  var frame=wrapper.offsetHeight-wrapper.clientHeight;            /* border (desktop) ; mobile-ல் 0 */
+  var maxH=Math.round(window.innerHeight*0.8);
+  wrapper.style.height=Math.min(Math.floor(h)+frame, maxH)+'px';  /* floor → படம் எப்போதும் பெட்டியை முழுமையாக நிரப்பும் */
+  wrapper.classList.toggle('zoomed', zoomSc>1.0001);
+}
+var _hl=null;   /* highlight செய்யப்பட்ட பிளாட்டின் எல்லைப் பெட்டி (original image px) */
+function sizeOverlay(){
+  var img=document.getElementById('plotImg'), svg=document.getElementById('svgOverlay');
+  if(!_hl || !origW){ svg.style.display='none'; return; }
+  var r=img.offsetWidth/COORD_W;
+  svg.style.left=(_hl.x*r)+'px'; svg.style.top=(_hl.y*r)+'px';
+  svg.style.width=(_hl.w*r)+'px'; svg.style.height=(_hl.h*r)+'px';
+  svg.style.display='block';
+}
+function clearHighlight(){
+  _hl=null;
+  var ph=document.getElementById('plotHighlight'); if(ph) ph.style.display='none';
+  document.getElementById('svgOverlay').style.display='none';
+}
+var _baseW=0, _rescaleTimer=null;
+function applyZoom(){
+  var wrapper=document.getElementById('wrapper');
+  var img=document.getElementById('plotImg');
+  if(!_baseW || zoomSc<=1.0001){ img.style.width='100%'; _baseW=wrapper.clientWidth; }
+  img.style.width=(_baseW*zoomSc)+'px';
+  fitWrapperHeight();
+  rescaleCoords();
+}
+/* அதிகபட்ச zoom: படத்தின் உண்மையான pixel அளவின் 4 மடங்கு வரை (குறைந்தது 12x) */
+function maxZoom(){ return Math.max(12, (origW&&_baseW) ? (origW*4)/_baseW : 12); }
+
+/* (cx,cy) = wrapper-க்குள் zoom மையம். Pinch / wheel நடக்கும் போது படம் & overlay மட்டும் மாறும்;
+   <area> coords zoom நின்ற பின் (120ms) ஒரு முறை மட்டும் கணக்கிடப்படும் — அதனால் zoom மென்மையாக இருக்கும். */
+function setZoomAt(newSc, cx, cy){
+  var wrapper=document.getElementById('wrapper'), img=document.getElementById('plotImg');
+  if(!origW) return false;
+  if(!_baseW) _baseW=wrapper.clientWidth;
+  newSc=Math.max(1, Math.min(maxZoom(), newSc));
+  if(Math.abs(newSc-zoomSc)<0.0005) return false;
+  var k=newSc/zoomSc, px=wrapper.scrollLeft+cx, py=wrapper.scrollTop+cy;
+  zoomSc=newSc;
+  img.style.width=(_baseW*zoomSc)+'px';
+  fitWrapperHeight(); sizeOverlay();
+  wrapper.scrollLeft=px*k-cx; wrapper.scrollTop=py*k-cy;
+  clearTimeout(_rescaleTimer); _rescaleTimer=setTimeout(rescaleCoords,120);
+  return true;
+}
+
+function initGestures(){
+  var wrapper=document.getElementById('wrapper');
+  /* ── Mobile: இரு விரல் pinch zoom ── */
+  var pinch=null, raf=0, pending=null;
+  function tdist(t){ var dx=t[0].clientX-t[1].clientX, dy=t[0].clientY-t[1].clientY; return Math.sqrt(dx*dx+dy*dy)||1; }
+  function tmid(t){ return {x:(t[0].clientX+t[1].clientX)/2, y:(t[0].clientY+t[1].clientY)/2}; }
+  wrapper.addEventListener('touchstart', function(e){
+    if(e.touches.length===2){ var m=tmid(e.touches); pinch={d:tdist(e.touches), z:zoomSc, mx:m.x, my:m.y}; }   /* zoom செய்யும்போது highlight, tooltip இரண்டும் அப்படியே இருக்கும் */
+  }, {passive:true});
+  wrapper.addEventListener('touchmove', function(e){
+    if(!pinch || e.touches.length!==2) return;
+    e.preventDefault();
+    var m=tmid(e.touches); pending={sc:pinch.z*tdist(e.touches)/pinch.d, x:m.x, y:m.y};
+    if(raf) return;
+    raf=requestAnimationFrame(function(){
+      raf=0; if(!pending||!pinch) return;
+      var r=wrapper.getBoundingClientRect();
+      wrapper.scrollLeft-=(pending.x-pinch.mx); wrapper.scrollTop-=(pending.y-pinch.my);
+      pinch.mx=pending.x; pinch.my=pending.y;
+      setZoomAt(pending.sc, pending.x-r.left, pending.y-r.top);
+      pending=null;
+    });
+  }, {passive:false});
+  function endPinch(e){ if(pinch && e.touches.length<2){ pinch=null; pending=null; } }
+  wrapper.addEventListener('touchend', endPinch, {passive:true});
+  wrapper.addEventListener('touchcancel', endPinch, {passive:true});
+  /* iOS Safari: வரைபடத்தின் மேல் முழுப் பக்கமும் zoom ஆவதைத் தடு */
+  ['gesturestart','gesturechange','gestureend'].forEach(function(ev){ wrapper.addEventListener(ev, function(e){ e.preventDefault(); }, {passive:false}); });
+
+  /* ── Desktop: mouse wheel / trackpad pinch = zoom ; mouse drag = நகர்த்த ; double-click = zoom in ── */
+  wrapper.addEventListener('wheel', function(e){
+    var r=wrapper.getBoundingClientRect();
+    var f=Math.exp(-e.deltaY*(e.ctrlKey?0.012:0.0018)*(e.deltaMode===1?30:1));
+    var changed=setZoomAt(zoomSc*f, e.clientX-r.left, e.clientY-r.top);
+    /* zoom 1-ல் கீழ்நோக்கி உருட்டினால் மட்டும் பக்கம் வழக்கம் போல scroll ஆகும் */
+    if(changed || e.ctrlKey || zoomSc>1.0001) e.preventDefault();
+  }, {passive:false});
+  wrapper.addEventListener('dblclick', function(e){
+    var r=wrapper.getBoundingClientRect(); setZoomAt(zoomSc*2, e.clientX-r.left, e.clientY-r.top);
+  });
+  var drag=null, dragged=false;
+  wrapper.addEventListener('mousedown', function(e){ if(e.button!==0) return; drag={x:e.clientX,y:e.clientY,l:wrapper.scrollLeft,t:wrapper.scrollTop}; dragged=false; });
+  window.addEventListener('mousemove', function(e){
+    if(!drag) return;
+    var dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+    if(!dragged && Math.abs(dx)+Math.abs(dy)<6) return;
+    dragged=true; wrapper.classList.add('dragging');
+    wrapper.scrollLeft=drag.l-dx; wrapper.scrollTop=drag.t-dy;
+  });
+  window.addEventListener('mouseup', function(){ if(drag){ drag=null; wrapper.classList.remove('dragging'); setTimeout(function(){ dragged=false; },0); } });
+  wrapper.addEventListener('click', function(e){ if(dragged){ e.preventDefault(); e.stopPropagation(); } }, true);
+  wrapper.addEventListener('dragstart', function(e){ e.preventDefault(); });
+}
+
+/* ── PR DOCS DROPDOWN ── */
+window.toggleDocsMenu=function(e){
+  e.stopPropagation();
+  var wrap=document.getElementById('docsDropdownWrap');
+  var menu=document.getElementById('docsDropdownMenu');
+  if(menu)menu.classList.toggle('open');
+  if(wrap)wrap.classList.toggle('open', menu.classList.contains('open'));
+};
+function closeDocsMenu(){
+  var wrap=document.getElementById('docsDropdownWrap'), menu=document.getElementById('docsDropdownMenu');
+  if(menu)menu.classList.remove('open'); if(wrap)wrap.classList.remove('open');
+}
+document.addEventListener('click', function(e){
+  var wrap=document.getElementById('docsDropdownWrap');
+  if(wrap && !wrap.contains(e.target)) closeDocsMenu();
+});
+/* PDF link இல்லாத ஆவணம் → ⏳ ; தொட்டால் EC பதிவு விவரம் tooltip-ல் காட்டு */
+document.querySelectorAll('.docs-menu-item').forEach(function(a){
+  var href=(a.getAttribute('href')||'').trim();
+  if(!href || href==='#'){
+    a.removeAttribute('target'); a.removeAttribute('href');
+    var arr=a.querySelector('.docs-link-arr'); if(arr) arr.textContent='⏳';
+    a.addEventListener('click', function(ev){
+      ev.preventDefault(); ev.stopPropagation();
+      closeDocsMenu();
+      showOther(a.getAttribute('data-doc'));
+    });
+  }
+});
+
+function initMap(){
+  var img=document.getElementById('plotImg');
+  var fallbacks=['Plot_Map-Model.webp','plot-map.png','plot-map-7016x4958.png'];
+  normalizeAreas();
+  function ready(){
+    origW=img.naturalWidth; origH=img.naturalHeight;
+    document.getElementById('mapError').classList.remove('show');
+    applyZoom();
+  }
+  function failed(){
+    if(fallbacks.length){ img.src=fallbacks.shift(); return; }
+    img.style.display='none';
+    document.getElementById('mapError').classList.add('show');
+  }
+  img.addEventListener('load', ready);
+  img.addEventListener('error', failed);
+  if(img.complete){ if(img.naturalWidth) ready(); else failed(); }
+  window.addEventListener('resize', function(){ _baseW=0; var z=zoomSc; zoomSc=1; applyZoom(); if(z>1.0001){ zoomSc=z; applyZoom(); } });
+  initGestures();
+
+  document.querySelectorAll('#Map area').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var n=plotsOfArea(a)[0];
+      highlightPlot(n);
+      showTip(n, e.clientX, e.clientY);
+      setTimeout(function(){ revealPlotAboveTip(n); }, 90);
+    });
+  });
+}
+
+function plotsOfArea(a){ return String(a.getAttribute('data-plot')||'').split(/\s+/).filter(Boolean); }
+function areasOf(plotNum){
+  return Array.from(document.querySelectorAll('#Map area')).filter(function(a){ return plotsOfArea(a).indexOf(String(plotNum))>=0 && areaCoords(a); });
+}
+function findArea(plotNum){ return areasOf(plotNum)[0]||null; }
+
+/* ஒரே பிளாட்டிற்கு பல area இருந்தால் (17W/17E, 94E/94W) அனைத்தையும் highlight செய் */
+function highlightPlot(plotNum){
+  var list=origW?areasOf(plotNum):[];
+  if(!list.length){ clearHighlight(); return; }
+  var xs=[], ys=[], allPts=[];
+  list.forEach(function(a){
+    var c=areaCoords(a), pts='';
+    for(var j=0;j<c.length-1;j+=2){ pts+=c[j]+','+c[j+1]+' '; xs.push(c[j]); ys.push(c[j+1]); }
+    allPts.push(pts.trim());
+  });
+  var x1=Math.min.apply(null,xs)-4, y1=Math.min.apply(null,ys)-4, x2=Math.max.apply(null,xs)+4, y2=Math.max.apply(null,ys)+4;
+  _hl={x:x1, y:y1, w:x2-x1, h:y2-y1};
+  var svg=document.getElementById('svgOverlay');
+  Array.from(svg.querySelectorAll('polygon.extra')).forEach(function(e){ e.remove(); });
+  var poly=document.getElementById('plotHighlight');
+  poly.setAttribute('points', allPts[0]);
+  poly.style.display='block';
+  allPts.slice(1).forEach(function(pts){ var e=poly.cloneNode(false); e.removeAttribute('id'); e.setAttribute('class','extra'); e.setAttribute('points',pts); svg.appendChild(e); });
+  document.getElementById('svgOverlay').setAttribute('viewBox', x1+' '+y1+' '+(x2-x1)+' '+(y2-y1));
+  sizeOverlay();
+}
+
+/* select from results panel: zoom into the plot + show tooltip
+   (coords இன்னும் நிரப்பப்படாத பிளாட்டிற்கு zoom இல்லாமல் tooltip மட்டும் காட்டும்) */
+window.selectPlot=function(plotNum){
+  document.querySelectorAll('.result-item').forEach(function(el){
+    el.classList.toggle('selected-result',(el.getAttribute('data-plot')===String(plotNum)));
+  });
+  var c=[]; areasOf(plotNum).forEach(function(a){ c=c.concat(areaCoords(a)); });
+  if(!c.length||!origW){ clearHighlight(); showTip(plotNum); return; }
+
+  var wrapper=document.getElementById('wrapper');
+  var img=document.getElementById('plotImg');
+  var xs=c.filter(function(_,i){return i%2===0;});
+  var ys=c.filter(function(_,i){return i%2===1;});
+  var x1=Math.min.apply(null,xs), x2=Math.max.apply(null,xs);
+  var y1=Math.min.apply(null,ys), y2=Math.max.apply(null,ys);
+  var pw=x2-x1, ph2=y2-y1, pcx=(x1+x2)/2, pcy=(y1+y2)/2;
+
+  var baseW=_baseW||wrapper.clientWidth;
+  var wrapH=Math.round(window.innerHeight*0.8);
+  var targetFrac=0.3;
+  var scByW=(baseW*targetFrac)/((pw*baseW/COORD_W)||1);
+  var scByH=(wrapH*targetFrac)/((ph2*baseW/COORD_W)||1);
+  zoomSc=Math.min(maxZoom(), Math.max(1.5, Math.min(scByW, scByH)));
+  if(origW) zoomSc=Math.min(zoomSc, Math.max(1.5, (origW*1.15)/baseW));   /* படத்தின் உண்மை pixel அளவை மீறி மங்கலாக zoom ஆகாது */
+
+  applyZoom();
+  var scaledW=baseW*zoomSc;
+  wrapH=wrapper.clientHeight||wrapH;
+  highlightPlot(plotNum);
+
+  var spp=scaledW/COORD_W;
+  setTimeout(function(){
+    /* Desktop-ல் tooltip இடப்பக்கம் வருவதால் பிளாட்டை வலப்பக்க மையத்தில் காட்டு; mobile-ல் நடுவில் */
+    var fx=(window.innerWidth>600 && window.innerWidth*1>600)?0.72:0.5;
+    wrapper.scrollLeft=Math.max(0, pcx*spp-baseW*fx);
+    wrapper.scrollTop=Math.max(0, pcy*spp-wrapH/2);
+    var wTop=wrapper.getBoundingClientRect().top+(window.scrollY||0);
+    var searchH=(document.querySelector('.search-section')||{offsetHeight:0}).offsetHeight;
+    window.scrollTo({top:Math.max(0,wTop-searchH-40), behavior:'smooth'});
+    showTip(plotNum);
+    setTimeout(function(){ revealPlotAboveTip(plotNum); }, 650);
+  },90);
+};
+
+/* ================= SEARCH ================= */
+var _placeholders={
+  plot:'Plot எண் உள்ளிடுங்கள்... (எ.கா: 22)',
+  doc:'Doc.No. உள்ளிடுங்கள்... (எ.கா: 485 அல்லது 485/2022 ; பதிவு நிலுவையில் உள்ளவற்றுக்கு TP எண்: 321037042)',
+  survey:'Survey No. உள்ளிடுங்கள்... (எ.கா: 163/6A1G அல்லது 163)',
+  name:'பெயர் உள்ளிடுங்கள்... தமிழ் / English (குறைந்தது 3 எழுத்துக்கள்)'
+};
+window._searchType='plot';
+window.setSearchType=function(type){
+  window._searchType=type;
+  ['plot','doc','survey','name'].forEach(function(t){
+    var el=document.getElementById('stab-'+t);
+    if(el)el.classList.toggle('active',t===type);
+  });
+  var inp=document.getElementById('searchInput');
+  if(inp){ inp.placeholder=_placeholders[type]||''; inp.value=''; inp.focus(); }
+  clearSearch(true);
+};
+
+window.clearSearch=function(keepInput){
+  var panel=document.getElementById('resultsPanel');
+  var clearBtn=document.getElementById('clearBtn');
+  var inp=document.getElementById('searchInput');
+  panel.classList.remove('open'); panel.innerHTML='';
+  clearBtn.classList.remove('show');
+  if(!keepInput && inp) inp.value='';
+  document.querySelectorAll('.result-item').forEach(function(el){el.classList.remove('selected-result');});
+  resetMapView();
+};
+/* Search result மூடும்போது: tooltip & highlight நீக்கி, zoom-ஐ நீக்கி வரைபடத்தை தொடக்க நிலைக்குக் கொண்டு வா */
+function resetMapView(){
+  if(typeof hideTip==='function') hideTip();
+  var wrapper=document.getElementById('wrapper'); if(!wrapper) return;
+  clearTimeout(_rescaleTimer);
+  if(zoomSc>1.0001){ zoomSc=1; applyZoom(); }
+  wrapper.scrollLeft=0; wrapper.scrollTop=0;
+}
+
+/* English ↔ தமிழ் பெயர் தேடல்: eng = தமிழ்ப் பெயரின் தானியங்கி ஒலிபெயர்ப்பு (தோராயம்).
+   normEng = எழுத்துக்கூட்டல் வேறுபாடுகளை சமன் செய்யும்; skel = மெய்யெழுத்து வரிசை மட்டும் (chandran ≈ santhiran). */
+function normEng(s,ns){
+  var r=s.toLowerCase().replace(/ph/g,'p').replace(/ch/g,'s').replace(/zh/g,'l').replace(/th/g,'t').replace(/sh/g,'s').replace(/dh/g,'t').replace(/bh/g,'p').replace(/gh/g,'k').replace(/kh/g,'k')
+    .replace(/ng/g,'n').replace(/nj/g,'n')
+    .replace(/[bgdzjcfwqh]/g,function(c){return{b:'p',g:'k',d:'t',z:'s',j:'s',c:'k',f:'p',w:'v',q:'k',h:'k'}[c];})
+    .replace(/aa/g,'a').replace(/oo/g,'u').replace(/ee/g,'i').replace(/ae/g,'e').replace(/oa/g,'o').replace(/ai/g,'a').replace(/y/g,'i')
+    .replace(/(.)\1+/g,'$1');
+  return ns?r.replace(/[^a-z0-9|]+/g,''):r;
+}
+function skel(s){ return normEng(s,1).replace(/[aeiou]/g,'').replace(/(.)\1+/g,'$1'); }
+function nameMatch(rec, ql){
+  var allN=((rec.owner||'')+' '+(rec.all_names||'')).toLowerCase();
+  var isAscii=ql.split('').every(function(c){return c.charCodeAt(0)<128;});
+  if(!isAscii) return allN.indexOf(ql)!==-1;
+  if(allN.indexOf(ql)!==-1) return true;
+  if(!rec._en){ rec._en=normEng(rec.eng||'',1); rec._sk=(rec.eng||'').split('|').map(skel).join('|'); }
+  var q3=normEng(ql,1); if(q3 && rec._en.indexOf(q3)!==-1) return true;
+  var qs=skel(ql); return qs.length>=4 && rec._sk.indexOf(qs)!==-1;
+}
+
+window.doSearch=function(q){
+  var panel=document.getElementById('resultsPanel'),clearBtn=document.getElementById('clearBtn');
+  q=q.trim();
+  if(!q){ clearSearch(true); return; }
+  clearBtn.classList.add('show');
+  var ql=q.toLowerCase();
+  var stype=window._searchType||'plot';
+  var results=[], others=[], stub=null;
+
+  if(stype==='plot'){
+    results=PLOTS.filter(function(p){ return String(p.n)===q; });
+    if(!results.length && /^\d+$/.test(q) && +q>=1 && +q<=MAX_PLOT) stub=String(+q);
+  } else if(stype==='doc'){
+    var hasSlash=q.indexOf('/')!==-1;
+    /* TP/321037042/2026 போன்ற தற்காலிக எண்ணை நடு எண்ணை (321037042) மட்டும் கொடுத்தும் தேடலாம் */
+    var dm=function(d){ d=String(d).trim().toLowerCase(); if(hasSlash) return d===ql || d.replace(/^tp\//,'')===ql; var a=d.split('/'); return (a[0]==='tp'?a[1]:a[0])===ql; };
+    results=PLOTS.filter(function(p){ return plotDocKeys(p).some(dm); });
+    others=OTHERS.filter(function(o){ return dm(o.doc); });
+  } else if(stype==='survey'){
+    var qsv=ql.replace(/\s+/g,'');
+    var sm=function(s){ return s.toLowerCase().replace(/\s+/g,'').indexOf(qsv)===0; };
+    results=PLOTS.filter(function(p){ return plotSurveys(p).some(sm); });
+    others=OTHERS.filter(function(o){ var s=[]; o.rows.forEach(function(r){ splitSurveys(r.survey,s); }); return s.some(sm); });
+  } else {
+    if(q.length<3){ panel.classList.remove('open'); panel.innerHTML=''; return; }
+    results=PLOTS.filter(function(p){ return nameMatch(p,ql); });
+    others=OTHERS.filter(function(o){ return nameMatch(o,ql); });
+  }
+
+  var cnt=[]; if(results.length) cnt.push(results.length+' பிளாட்'); if(others.length) cnt.push(others.length+' பிற பதிவு');
+  renderResults(results, others, stub, stub?'பிளாட் '+stub+' — விற்பனை விபரம் இன்னும் பதிவு செய்யப்படவில்லை':cnt.join(' + ')+' கிடைத்தது — தேர்ந்தெடுக்க தொடவும்', q);
+};
+/* Search result-ல் காட்ட வேண்டிய பெயர் & Doc.No : கடைசி கிரையத்தின் Claimant (Double Entry எனில் இரு வாங்குபவர்களும்) */
+function resultOwner(p){
+  var tx=p.tx||[];
+  if(isDouble(p)){
+    var d=tx.filter(function(t){ return /இருமுறை விற்பனை/.test(t.vs); });
+    return { name:d.map(function(t){return t.claim;}).join(' / '), doc:d.map(function(t){return t.doc;}).join(', ') };
+  }
+  var sales=tx.filter(isSale), t=sales.length?sales[sales.length-1]:tx[tx.length-1];
+  return t?{name:t.claim, doc:docLabelText(t)}:{name:p.owner||'', doc:''};
+}
+function renderResults(results, others, stub, countText, q){
+  var panel=document.getElementById('resultsPanel');
+  if(!results.length && !others.length && !stub){
+    panel.classList.add('open');
+    panel.innerHTML='<div class="no-results">🔍 &ldquo;'+escHtml(q)+'&rdquo; — இந்த வரைபடத்தில் எதுவும் கிடைக்கவில்லை</div>';
+    return;
+  }
+  var html='<div class="results-count">'+escHtml(countText)+'</div>';
+  /* Search result-ல் பெயர் + Doc.No மட்டும் */
+  if(stub){
+    html+='<div class="result-item" data-plot="'+stub+'" onclick="selectPlot(\''+stub+'\')"><div class="result-badge none">Plot '+stub+'</div><div class="result-info"><div class="result-name">விற்பனை விபரம் இல்லை</div></div></div>';
+  }
+  results.forEach(function(p){
+    var o=resultOwner(p);
+    html+='<div class="result-item" data-plot="'+p.n+'" onclick="selectPlot(\''+p.n+'\')">'+
+      '<div class="result-badge">Plot '+p.n+'</div>'+
+      '<div class="result-info">'+
+        '<div class="result-name">'+escHtml(o.name)+'</div>'+
+        '<div class="result-doc">Doc.No : '+escHtml(o.doc)+'</div>'+
+      '</div>'+
+      dlButtonsHtml(p)+
+    '</div>';
+  });
+  others.forEach(function(o){
+    var r=o.rows[0];
+    html+='<div class="result-item" data-doc="'+escHtml(o.doc)+'" onclick="showOther(\''+o.doc.replace(/'/g,"\\'")+'\')">'+
+      '<div class="result-badge other">'+(o.kind==='parent'?'முந்தைய ஆவணம்':'மனை எண் இல்லை')+'</div>'+
+      '<div class="result-info">'+
+        '<div class="result-name">'+escHtml(r.claim)+'</div>'+
+        '<div class="result-doc">Doc.No : '+escHtml(o.doc)+'</div>'+
+      '</div></div>';
+  });
+  panel.classList.add('open');
+  panel.innerHTML=html;
+}
+
+/* ── STATS: PLOTS data-வில் இருந்து தானாக கணக்கிடும் ──
+   Total   = மனைப்பிரிவின் மொத்த பிளாட்டுகள் (TOTAL_PLOTS)
+   Sold    = குறைந்தது ஒரு கிரைய ஆவணம் உள்ள பிளாட்டுகள் (பதிவு நிலுவையில் உள்ளவையும் சேரும்)
+   Resold  = இரண்டு அல்லது அதற்கு மேல் கிரையம் பதிவானவை (Double Entry தவிர)
+   Double Entry = ஒரே பிளாட் இரு வெவ்வேறு நபர்களுக்கு இருமுறை கிரையம் பதிவானவை (tx.vs-ல் "இருமுறை விற்பனை" என்று இருக்க வேண்டும்)
+   Balance = Total - Sold */
+var TOTAL_PLOTS = 55;   /* Layout-ல் உள்ள விற்பனை மனைகள் (PP-1, PP-2 ஒதுக்கீடுகள் சேராது) */
+var OFF_MAP = [];       /* data-வில் உள்ளன, ஆனால் layout-ல் இல்லாத பிளாட் எண்கள் — Sold/Balance கணக்கில் சேராது */
+function isDouble(p){ return (p.tx||[]).some(function(t){ return /இருமுறை விற்பனை/.test(t.vs); }); }
+(function(){
+  var sold=0, resold=0, dbl=0;
+  PLOTS.forEach(function(p){
+    if(OFF_MAP.indexOf(String(p.n))>=0) return;
+    if(saleCount(p)>=1) sold++;
+    if(saleCount(p)>=2 && !isDouble(p)) resold++;
+    if(isDouble(p)) dbl++;
+  });
+  document.getElementById('statTotal').textContent = TOTAL_PLOTS;
+  document.getElementById('statSold').textContent = sold;
+  document.getElementById('statResale').textContent = resold;
+  document.getElementById('statDouble').textContent = dbl;
+  document.getElementById('statAvail').textContent = Math.max(0, TOTAL_PLOTS - sold);
+})();
+window.showDoubleEntries=function(){
+  var list=PLOTS.filter(isDouble);
+  var inp=document.getElementById('searchInput'); if(inp) inp.value='';
+  document.getElementById('clearBtn').classList.add('show');
+  renderResults(list, [], null, 'Double Entry — '+list.length+' பிளாட் — தேர்ந்தெடுக்க தொடவும்', '');
+};
+
+initMap();
+</script>
+</body>
+</html>
